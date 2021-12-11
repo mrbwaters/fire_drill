@@ -1,6 +1,8 @@
 // Declare methods from User Event 15
 event_user(15);
 
+global.win = false;
+
 // Sprite management
 sprites = {};
 init_sprites(
