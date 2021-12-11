@@ -9,7 +9,9 @@ init_sprites(
 	"idle", "Idle",
 	"run",	"Run",
 	"jump",	"Jump",
-	"fall",	"Fall"
+	"fall",	"Fall",
+	"dead", "Dead",
+	"win", "Win"
 	);
 
 // Variables
@@ -155,5 +157,28 @@ fsm
 				fsm.change("idle");
 				return;
 			}
+		}
+	})
+	.add("dead", {
+		enter: function() {
+			sprite_index = get_sprite();
+			image_index = 0;
+			image_speed = 1;
+			
+			hspd = 0;
+			vspd = 0;
+			room_goto(rm_game_over);
+		}
+	})
+	.add("win", {
+		enter: function() {
+			sprite_index = get_sprite();
+			image_index = 0;
+			image_speed = 1;
+			
+			hspd = 0;
+			vspd = 0;
+			global.win = true;
+			room_goto(rm_game_over);
 		}
 	});

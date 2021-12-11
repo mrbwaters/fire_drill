@@ -1,11 +1,13 @@
 {
   "resources": [
     {"id":{"name":"SnowState","path":"scripts/SnowState/SnowState.yy",},"order":1,},
+    {"id":{"name":"sPlayerWin","path":"sprites/sPlayerWin/sPlayerWin.yy",},"order":8,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"sPlayerRun","path":"sprites/sPlayerRun/sPlayerRun.yy",},"order":4,},
     {"id":{"name":"sPlayerFall","path":"sprites/sPlayerFall/sPlayerFall.yy",},"order":5,},
+    {"id":{"name":"sPlayerDead","path":"sprites/sPlayerDead/sPlayerDead.yy",},"order":7,},
     {"id":{"name":"meta_pit","path":"objects/meta_pit/meta_pit.yy",},"order":1,},
-    {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":1,},
+    {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":2,},
     {"id":{"name":"meta_gameover","path":"objects/meta_gameover/meta_gameover.yy",},"order":0,},
     {"id":{"name":"obj_goal","path":"objects/obj_goal/obj_goal.yy",},"order":3,},
     {"id":{"name":"sPlayerIdle","path":"sprites/sPlayerIdle/sPlayerIdle.yy",},"order":2,},
@@ -13,6 +15,7 @@
     {"id":{"name":"rm_game_over","path":"rooms/rm_game_over/rm_game_over.yy",},"order":1,},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"order":1,},
     {"id":{"name":"sPlayerJump","path":"sprites/sPlayerJump/sPlayerJump.yy",},"order":3,},
+    {"id":{"name":"sGoal","path":"sprites/sGoal/sGoal.yy",},"order":6,},
     {"id":{"name":"__snowstate_config","path":"scripts/__snowstate_config/__snowstate_config.yy",},"order":0,},
     {"id":{"name":"fnt_debug","path":"fonts/fnt_debug/fnt_debug.yy",},"order":0,},
     {"id":{"name":"rm_platform","path":"rooms/rm_platform/rm_platform.yy",},"order":0,},
@@ -61,7 +64,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.7.603",
+    "IDEVersion": "2.3.7.606",
   },
   "resourceVersion": "1.4",
   "name": "test-git-repo",
