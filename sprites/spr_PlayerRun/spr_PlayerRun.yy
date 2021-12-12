@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ad8c88b0-7173-449b-a175-2614c6b3af70","path":"sprites/sGoal/sGoal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ad8c88b0-7173-449b-a175-2614c6b3af70","path":"sprites/sGoal/sGoal.yy",},"LayerId":{"name":"0cb86d5b-582a-4908-a0c4-01888ffdffb1","path":"sprites/sGoal/sGoal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sGoal","path":"sprites/sGoal/sGoal.yy",},"resourceVersion":"1.0","name":"ad8c88b0-7173-449b-a175-2614c6b3af70","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"59eca3cb-0c98-4b39-a95a-71ee21308e6e","path":"sprites/spr_PlayerRun/spr_PlayerRun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"59eca3cb-0c98-4b39-a95a-71ee21308e6e","path":"sprites/spr_PlayerRun/spr_PlayerRun.yy",},"LayerId":{"name":"ee35bfbd-71ba-42bd-b4c9-825195140679","path":"sprites/spr_PlayerRun/spr_PlayerRun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_PlayerRun","path":"sprites/spr_PlayerRun/spr_PlayerRun.yy",},"resourceVersion":"1.0","name":"59eca3cb-0c98-4b39-a95a-71ee21308e6e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sGoal","path":"sprites/sGoal/sGoal.yy",},
+    "spriteId": {"name":"spr_PlayerRun","path":"sprites/spr_PlayerRun/spr_PlayerRun.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"8d5e1769-15f1-4b2e-9827-9c37b966d173","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ad8c88b0-7173-449b-a175-2614c6b3af70","path":"sprites/sGoal/sGoal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f479ffb2-1c49-4324-ba61-6d6ddb1d18c6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"59eca3cb-0c98-4b39-a95a-71ee21308e6e","path":"sprites/spr_PlayerRun/spr_PlayerRun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sGoal","path":"sprites/sGoal/sGoal.yy",},
+    "parent": {"name":"spr_PlayerRun","path":"sprites/spr_PlayerRun/spr_PlayerRun.yy",},
     "resourceVersion": "1.3",
-    "name": "sGoal",
+    "name": "spr_PlayerRun",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0cb86d5b-582a-4908-a0c4-01888ffdffb1","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ee35bfbd-71ba-42bd-b4c9-825195140679","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sGoal",
+  "name": "spr_PlayerRun",
   "tags": [],
   "resourceType": "GMSprite",
 }

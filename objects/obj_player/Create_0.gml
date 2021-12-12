@@ -5,13 +5,14 @@ global.win = false;
 
 // Sprite management
 sprites = {};
-init_sprites(
-	"idle", "Idle",
-	"run",	"Run",
-	"jump",	"Jump",
-	"fall",	"Fall",
-	"dead", "Dead",
-	"win", "Win"
+spr_manager = new meta_spr_manager();
+spr_manager.init_sprites(
+	"idle", "spr_Player", "Idle",
+	"run",  "spr_Player", "Run",
+	"jump", "spr_Player", "Jump",
+	"fall", "spr_Player", "Fall",
+	"dead", "spr_Player", "Dead",
+	"win",  "spr_Player", "Win"
 	);
 
 // Variables
@@ -43,7 +44,7 @@ fsm
 	})
 	.add("idle", {
 		enter: function() {
-			sprite_index = get_sprite();
+			sprite_index = spr_manager.get_sprite(fsm);
 			image_speed = 1;
 			
 			hspd = 0;
@@ -75,7 +76,7 @@ fsm
 	})
 	.add("run", {
 		enter: function() {
-			sprite_index = get_sprite();
+			sprite_index = spr_manager.get_sprite(fsm);
 			image_speed = 1;
 		},
 		step: function() {
@@ -109,7 +110,7 @@ fsm
 	})
 	.add("jump", {
 		enter: function() {
-			sprite_index = get_sprite();
+			sprite_index = spr_manager.get_sprite(fsm);
 			image_index = 0;
 			image_speed = 1;
 			
@@ -129,7 +130,7 @@ fsm
 	})
 	.add("fall", {
 		enter: function() {
-			sprite_index = get_sprite();
+			sprite_index = spr_manager.get_sprite(fsm);
 			image_index = 0;
 			image_speed = 1;
 		},
@@ -161,7 +162,7 @@ fsm
 	})
 	.add("dead", {
 		enter: function() {
-			sprite_index = get_sprite();
+			sprite_index = spr_manager.get_sprite(fsm);
 			image_index = 0;
 			image_speed = 1;
 			
@@ -172,7 +173,7 @@ fsm
 	})
 	.add("win", {
 		enter: function() {
-			sprite_index = get_sprite();
+			sprite_index = spr_manager.get_sprite(fsm);
 			image_index = 0;
 			image_speed = 1;
 			

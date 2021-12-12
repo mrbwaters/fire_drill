@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"60f987a4-dca7-4ee6-8007-2e6071e5c922","path":"sprites/sPlayerDead/sPlayerDead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"60f987a4-dca7-4ee6-8007-2e6071e5c922","path":"sprites/sPlayerDead/sPlayerDead.yy",},"LayerId":{"name":"de30e25b-e103-48e3-a87b-86438832cbaa","path":"sprites/sPlayerDead/sPlayerDead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sPlayerDead","path":"sprites/sPlayerDead/sPlayerDead.yy",},"resourceVersion":"1.0","name":"60f987a4-dca7-4ee6-8007-2e6071e5c922","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ad8c88b0-7173-449b-a175-2614c6b3af70","path":"sprites/spr_Goal/spr_Goal.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ad8c88b0-7173-449b-a175-2614c6b3af70","path":"sprites/spr_Goal/spr_Goal.yy",},"LayerId":{"name":"0cb86d5b-582a-4908-a0c4-01888ffdffb1","path":"sprites/spr_Goal/spr_Goal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_Goal","path":"sprites/spr_Goal/spr_Goal.yy",},"resourceVersion":"1.0","name":"ad8c88b0-7173-449b-a175-2614c6b3af70","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sPlayerDead","path":"sprites/sPlayerDead/sPlayerDead.yy",},
+    "spriteId": {"name":"spr_Goal","path":"sprites/spr_Goal/spr_Goal.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"18746825-cc9a-41a5-b591-7dd7a2c35c99","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"60f987a4-dca7-4ee6-8007-2e6071e5c922","path":"sprites/sPlayerDead/sPlayerDead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8d5e1769-15f1-4b2e-9827-9c37b966d173","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ad8c88b0-7173-449b-a175-2614c6b3af70","path":"sprites/spr_Goal/spr_Goal.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sPlayerDead","path":"sprites/sPlayerDead/sPlayerDead.yy",},
+    "parent": {"name":"spr_Goal","path":"sprites/spr_Goal/spr_Goal.yy",},
     "resourceVersion": "1.3",
-    "name": "sPlayerDead",
+    "name": "spr_Goal",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"de30e25b-e103-48e3-a87b-86438832cbaa","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0cb86d5b-582a-4908-a0c4-01888ffdffb1","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sPlayerDead",
+  "name": "spr_Goal",
   "tags": [],
   "resourceType": "GMSprite",
 }

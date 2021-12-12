@@ -1,13 +1,13 @@
 {
   "spriteId": {
-    "name": "sPlayer",
-    "path": "sprites/sPlayer/sPlayer.yy",
+    "name": "spr_Player",
+    "path": "sprites/spr_Player/spr_Player.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": {
-    "name": "sPlayer",
-    "path": "sprites/sPlayer/sPlayer.yy",
+    "name": "spr_Player",
+    "path": "sprites/spr_Player/spr_Player.yy",
   },
   "persistent": false,
   "parentObjectId": null,

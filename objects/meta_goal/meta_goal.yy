@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sGoal",
-    "path": "sprites/sGoal/sGoal.yy",
+    "name": "spr_Goal",
+    "path": "sprites/spr_Goal/spr_Goal.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,11 +24,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Meta",
+    "path": "folders/Objects/Meta.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_goal",
+  "name": "meta_goal",
   "tags": [],
   "resourceType": "GMObject",
 }
