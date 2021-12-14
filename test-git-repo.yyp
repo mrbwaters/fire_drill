@@ -6,6 +6,7 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"spr_PlayerRun","path":"sprites/spr_PlayerRun/spr_PlayerRun.yy",},"order":4,},
     {"id":{"name":"spr_PlayerFall","path":"sprites/spr_PlayerFall/spr_PlayerFall.yy",},"order":5,},
+    {"id":{"name":"meta_move_fsm","path":"scripts/meta_move_fsm/meta_move_fsm.yy",},"order":1,},
     {"id":{"name":"spr_PlayerDead","path":"sprites/spr_PlayerDead/spr_PlayerDead.yy",},"order":7,},
     {"id":{"name":"meta_pit","path":"objects/meta_pit/meta_pit.yy",},"order":1,},
     {"id":{"name":"meta_wall","path":"objects/meta_wall/meta_wall.yy",},"order":2,},
