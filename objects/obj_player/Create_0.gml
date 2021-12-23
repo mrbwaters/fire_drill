@@ -1,4 +1,8 @@
-/// @description Insert description here
-// You can write your code in this editor
-name = "ladder_man";
-// Baby's first code comment!
+hspd = 0;
+vspd = 0;
+
+// Jump height
+jspd = 150;
+
+
+vspdMax = 10;
