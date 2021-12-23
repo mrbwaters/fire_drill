@@ -4,6 +4,7 @@ function move_and_collide(target_object){
 	// Get variables from object calling this function
 	x = target_object.x;
 	y = target_object.y;
+	
 	hspd = target_object.hspd;
 	vspd = target_object.vspd;
 	
@@ -23,6 +24,10 @@ function move_and_collide(target_object){
 	{
 		while (!vertical_collision) y += sign(vspd);
 		vspd = 0;
+		if (!target_object.on_ground) {
+			target_object.on_ground=true;
+			audio_play_sound(sfx_thud1_C2_dry,4,false);
+		}
 	}
 	y += vspd;
 }

@@ -6,3 +6,6 @@ jspd = 150;
 
 
 vspdMax = 10;
+
+// Start Background Music
+bgm_play(2);

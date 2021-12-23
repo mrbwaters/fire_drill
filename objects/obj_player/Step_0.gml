@@ -12,7 +12,11 @@ jump = keyboard_check_pressed(vk_space);
 hspd = 4 * hspd;
 
 // Jump ToDo fix how this works
-if (jump) vspd += -jspd;
+if (jump) { 
+	vspd += -jspd;
+	audio_play_sound(sfx_hit1_C2_dry,4,false)
+	on_ground=false;
+}
 
 // Apply Gravity and collisions
 apply_gravity(self);
