@@ -1,5 +1,5 @@
-hspd = 0;
-vspd = 0;
+hsp = 0;
+vsp = 0;
 
 // Player states
 enum states {
@@ -8,19 +8,16 @@ enum states {
 	jump
 }
 
+on_ground	= true;
+
 state		= states.idle;			
 run_spd		= 8;
 
 // Jump
-jspd		= 10;
-t_float		= .2 * power(10,3); //delay before applying gravity
+jspd		= 30;
+t_float		= 0; //2 * power(10, 2); //delay before applying gravity
 t_jump		= 0; 
-vspd_max	= 10;
-
+vsp_max	= 10;
 
 // Turn off texture intterpolation
 gpu_set_texfilter(false);
-
-
-// Start Background Music
-bgm_play(2);

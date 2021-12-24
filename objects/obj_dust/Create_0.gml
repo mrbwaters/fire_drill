@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-vspd = .00002 * random_range(-1,1) 
-hspd = .00006 * random_range(-1,1) 
+vsp = .00002 * random_range(-1,1) 
+hsp = .00006 * random_range(-1,1) 
 				
 t_destroy = current_time + 500 * random_range(0,1);
 
