@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "scr_audio",
-    "path": "folders/Scripts/scr_audio.yy",
+    "name": "scr_vfx",
+    "path": "folders/Scripts/scr_vfx.yy",
   },
   "resourceVersion": "1.0",
-  "name": "audio_bgm",
+  "name": "scr_dust_parts",
   "tags": [],
   "resourceType": "GMScript",
 }

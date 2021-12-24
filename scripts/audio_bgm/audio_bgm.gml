@@ -34,3 +34,11 @@ switch (mood) {
 function bgm_stop() {
 	audio_stop_sound(global._bgm);
 }
+
+function bgm_ctrl() {
+	
+if keyboard_check_pressed(ord("1")) bgm_play(1);
+if keyboard_check(ord("2")) bgm_play(2);
+if keyboard_check(ord("3")) bgm_play(3);
+if keyboard_check(ord("4")) bgm_play(4);
+}
