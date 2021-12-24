@@ -27,6 +27,11 @@ function move_and_collide(target_object){
 		if (!target_object.on_ground) {
 			target_object.on_ground=true;
 			audio_play_sound(sfx_thud1_C2_dry,4,false);
+			
+			for(var ii=0;ii<10;ii++) {
+				instance_create_layer(target_object.x + 32,target_object.y + 32,"Front",obj_dust);
+				instance_create_layer(target_object.x - 32,target_object.y + 32,"Front",obj_dust);
+			}
 		}
 	}
 	y += vspd;
