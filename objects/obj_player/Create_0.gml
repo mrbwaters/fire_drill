@@ -1,6 +1,15 @@
 hspd = 0;
 vspd = 0;
 
+// Player states
+enum states {
+	idle,
+	run,
+	jump
+}
+
+state = states.idle;
+
 // Jump height
 jspd = 10;
 t_float = .2*power(10,3); //delay before applying gravity
