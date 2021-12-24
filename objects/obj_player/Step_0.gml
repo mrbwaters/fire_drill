@@ -14,8 +14,7 @@ if (hspd > 0 or hspd < 0){
 	state = states.run;
 }
 
-// Jump ToDo fix how this works
-if (jump & on_ground) { 
+if (jump & on_ground) {
 	vspd += -jspd;
 	audio_play_sound(sfx_hit1_C2_dry,4,false)
 	on_ground=false;
@@ -23,19 +22,11 @@ if (jump & on_ground) {
 	state = states.jump;
 }
 
-// Apply Gravity and collisions
+show_debug_message("DEBUG >>>>> " + string(state));
 
-if keyboard_check(vk_space) {
-	if (current_time > t_jump + t_float)	 {
-		apply_gravity();
-		}
-	}
-else{			
-	apply_gravity()
-	}
-	
 switch (state){
-	case states.idle: vspd = 0; hspd = 0; apply_gravity(); move_and_collide(); break;
-	case states.run: apply_gravity(); move_and_collide(); break;
-	case states.jump: state=states.idle; break;
+	case states.idle: scr_player_idle(); break;
+	case states.run: scr_player_run(); break;
+	case states.jump: scr_player_jump(); break;
+	case states.fall: scr_player_fall(); break;
 }

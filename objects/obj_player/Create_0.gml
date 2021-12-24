@@ -5,7 +5,8 @@ vspd = 0;
 enum states {
 	idle,
 	run,
-	jump
+	jump,
+	fall
 }
 
 state = states.idle;
