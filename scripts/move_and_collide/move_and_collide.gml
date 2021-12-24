@@ -2,8 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function move_and_collide(){	
 	// Check for collisions with wall objects
-	horizontal_collision =  place_meeting(round(x+hspd),round(y), meta_obj_wall)
-	vertical_collision = place_meeting(round(x),round(y+vspd), meta_obj_wall)
+	horizontal_collision =  place_meeting(round(x+hspd),round(y), obj_wall)
+	vertical_collision = place_meeting(round(x),round(y+vspd), obj_wall)
 	
 	if (horizontal_collision)
 	{
