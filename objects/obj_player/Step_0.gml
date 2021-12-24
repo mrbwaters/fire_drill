@@ -22,11 +22,11 @@ if (jump & on_ground) {
 
 if keyboard_check(vk_space) {
 	if (current_time > t_jump + t_float)	 {
-		apply_gravity(self);
+		apply_gravity();
 		}
 	}
 else{			
-	apply_gravity(self)
+	apply_gravity()
 	}
 	
-move_and_collide(self);
+move_and_collide();
