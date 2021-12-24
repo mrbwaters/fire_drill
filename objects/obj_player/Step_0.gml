@@ -18,8 +18,8 @@ if (hspd > 0 or hspd < 0){
 if (jump & on_ground) { 
 	vspd += -jspd;
 	audio_play_sound(sfx_hit1_C2_dry,4,false)
-	on_ground=false;
-	t_jump=current_time;
+	on_ground = false;
+	t_jump = current_time;
 	state = states.jump;
 }
 
