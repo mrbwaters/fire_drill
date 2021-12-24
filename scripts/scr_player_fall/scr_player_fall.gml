@@ -3,6 +3,6 @@
 function scr_player_fall(){
 	apply_gravity();
 	move_and_collide();
-	if (hspd == 0 and vspd == 0) state = states.idle;
+	if (vspd == 0) state = states.idle;
 	else state = states.fall;
 }

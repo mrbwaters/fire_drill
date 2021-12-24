@@ -4,5 +4,5 @@ function apply_gravity(){
 	
 	// Govern physics of the world here
 	grav = .00015*delta_time;
-	vspd = min(vspd+grav, vspd_max);
+	vspd = min(vspd+grav, vspdMax);
 }
