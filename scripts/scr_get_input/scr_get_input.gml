@@ -7,8 +7,7 @@ function scr_get_input() {
 	//MOVE				
 	key_left			= keyboard_check(vk_left) or keyboard_check(ord("A"));
 	key_right			= keyboard_check(vk_right) or keyboard_check(ord("D"));
-	//key_forward			= keyboard_check(ord("W")) or keyboard_check(vk_up);
-	//key_backward		= keyboard_check(ord("S")) or keyboard_check(vk_down);
+	key_jump			= keyboard_check_pressed(vk_space);
 	
 	//Numbers
 	key_1				= keyboard_check_pressed(ord("1"));
