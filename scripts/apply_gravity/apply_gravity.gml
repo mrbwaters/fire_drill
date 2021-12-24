@@ -5,6 +5,6 @@ function apply_gravity(target_object){
 	vspdMax = target_object.vspdMax;
 	
 	// Govern physics of the world here
-	grav = 5;
+	grav = .00015*delta_time;
 	vspd = min(vspd+grav, vspdMax);
 }
