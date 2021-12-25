@@ -5,7 +5,8 @@ vsp = 0;
 enum states {
 	idle,
 	run,
-	jump
+	jump,
+	fall
 }
 
 on_ground	= true;
