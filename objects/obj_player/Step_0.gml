@@ -8,10 +8,23 @@ jump = keyboard_check_pressed(vk_space);
 // Forward movement
 hspd = 8 * hspd;
 
+// Enter run state when moving left or right
 if (hspd > 0 or hspd < 0){
 	state = states.run;
 }
 
+// Enter fall state when gravity is applied (i.e. falling off a ledge)
+if (vspd > 0) {
+	state = states.fall;
+	
+}
+
+// Return to idle if at any time vspd and hspd are 0
+if (vspd == 0 and hspd == 0){
+	state = states.idle;
+}
+
+// Enter jump state if player is on the ground and jump key is pressed
 if (jump & on_ground) {
 	vspd += -jspd;
 	audio_play_sound(sfx_hit1_C2_dry,4,false)
