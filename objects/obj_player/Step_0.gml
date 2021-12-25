@@ -6,15 +6,15 @@ scr_get_input();
 hspd = (key_right - key_left) * run_spd;
 
 if (hspd > 0 or hspd < 0){
-	state = states.run;
+	state		= states.run;
 }
 
 if (key_jump & on_ground) {
-	vspd -= jump_spd;
 	audio_play_sound(sfx_hit1_C2_dry,4,false)
-	on_ground=false;
-	t_jump = current_time;
-	state = states.jump;
+	vspd		-= jump_spd;
+	on_ground	= false;
+	t_jump		= current_time;
+	state		= states.jump;
 }
 
 if (state != 0) show_debug_message("DEBUG STATE >>>>> " + string(state));
