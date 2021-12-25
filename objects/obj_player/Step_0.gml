@@ -7,9 +7,5 @@ apply_player_input();
 update_player_state();
 apply_player_state();
 
-
 // Print Debug Messages
-
 print_debug_console();
-// Exit Game
-if key_quit apply_exit_game();	

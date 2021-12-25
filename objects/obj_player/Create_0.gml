@@ -18,7 +18,7 @@ jspd_max = 8;
 hspd_max = 5;
 
 t_float = 250; //Delay time (in ms?) for gliding before applying gravity
-t_jump=0; 
+t_jump = 0; 
 v_fallmax = 4;
 v_climb=3;
 v_run = 5;
