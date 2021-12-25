@@ -9,7 +9,6 @@ function move_and_collide(){
 	{
 		while (!horizontal_collision) x += sign(hspd);
 		hspd = 0;
-		
 	}
 	x += hspd * delta_time*60/1000000;
 	
@@ -28,6 +27,9 @@ function move_and_collide(){
 		}
 	}
 	y += vspd * delta_time*60/1000000;
+	
+	on_ladder= false;
+	on_ladder= place_meeting(round(x+hspd),round(y), obj_ladder) | place_meeting(round(x),round(y+vspd), obj_ladder)
 	
 	//show_debug_message(string(delta_time))
 }

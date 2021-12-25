@@ -6,7 +6,8 @@ enum states {
 	idle,
 	run,
 	jump,
-	fall
+	fall,
+	climb
 }
 
 // set initial state
@@ -17,9 +18,14 @@ jspd_max = 8;
 hspd_max = 5;
 
 t_float = 250; //Delay time (in ms?) for gliding before applying gravity
-dt_jump=0; 
+t_jump=0; 
 v_fallmax = 4;
+v_climb=3;
+v_run = 5;
 a_grav = .000075;
+
+on_ground=false;
+on_ladder=false;
 
 // Turn off texture intterpolation
 gpu_set_texfilter(false);
