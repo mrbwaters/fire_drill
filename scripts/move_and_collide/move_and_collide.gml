@@ -37,4 +37,4 @@ function move_and_collide(){
 			}
 	}
 	y += vspd;
-}
+}	
