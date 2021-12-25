@@ -3,7 +3,12 @@
     {"id":{"name":"meta_game","path":"objects/meta_game/meta_game.yy",},"order":0,},
     {"id":{"name":"spr_stone_floor1","path":"sprites/spr_stone_floor1/spr_stone_floor1.yy",},"order":2,},
     {"id":{"name":"sfx_hit1_C3_dry","path":"sounds/sfx_hit1_C3_dry/sfx_hit1_C3_dry.yy",},"order":2,},
+<<<<<<< Updated upstream
     {"id":{"name":"audio_bgm","path":"scripts/audio_bgm/audio_bgm.yy",},"order":0,},
+=======
+    {"id":{"name":"scr_audio_bgm","path":"scripts/scr_audio_bgm/scr_audio_bgm.yy",},"order":2,},
+    {"id":{"name":"scr_audio_sfx","path":"scripts/scr_audio_sfx/scr_audio_sfx.yy",},"order":5,},
+>>>>>>> Stashed changes
     {"id":{"name":"obj_dust","path":"objects/obj_dust/obj_dust.yy",},"order":0,},
     {"id":{"name":"Track1_Spooky_Demo_0b","path":"sounds/Track1_Spooky_Demo_0b/Track1_Spooky_Demo_0b.yy",},"order":0,},
     {"id":{"name":"move_and_collide","path":"scripts/move_and_collide/move_and_collide.yy",},"order":0,},
@@ -14,17 +19,23 @@
     {"id":{"name":"Track3_Calm_Demo_0a","path":"sounds/Track3_Calm_Demo_0a/Track3_Calm_Demo_0a.yy",},"order":2,},
     {"id":{"name":"meta_collision","path":"objects/meta_collision/meta_collision.yy",},"order":3,},
     {"id":{"name":"spr_stone_floor2","path":"sprites/spr_stone_floor2/spr_stone_floor2.yy",},"order":1,},
+    {"id":{"name":"scr_audio_init","path":"scripts/scr_audio_init/scr_audio_init.yy",},"order":6,},
     {"id":{"name":"scr_player_jump","path":"scripts/scr_player_jump/scr_player_jump.yy",},"order":3,},
     {"id":{"name":"sfx_hit1_C2_rev","path":"sounds/sfx_hit1_C2_rev/sfx_hit1_C2_rev.yy",},"order":1,},
     {"id":{"name":"sfx_thud1_C2_dry","path":"sounds/sfx_thud1_C2_dry/sfx_thud1_C2_dry.yy",},"order":4,},
     {"id":{"name":"scr_player_fall","path":"scripts/scr_player_fall/scr_player_fall.yy",},"order":0,},
     {"id":{"name":"spr_stone_floor3","path":"sprites/spr_stone_floor3/spr_stone_floor3.yy",},"order":0,},
+<<<<<<< Updated upstream
     {"id":{"name":"obj_scene_ctrl","path":"objects/obj_scene_ctrl/obj_scene_ctrl.yy",},"order":3,},
+=======
+    {"id":{"name":"scr_player_glide","path":"scripts/scr_player_glide/scr_player_glide.yy",},"order":4,},
+>>>>>>> Stashed changes
     {"id":{"name":"Track4_Adventure_Demo_0a","path":"sounds/Track4_Adventure_Demo_0a/Track4_Adventure_Demo_0a.yy",},"order":3,},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":4,},
     {"id":{"name":"sfx_hit1_C3_rev","path":"sounds/sfx_hit1_C3_rev/sfx_hit1_C3_rev.yy",},"order":3,},
     {"id":{"name":"scr_get_input","path":"scripts/scr_get_input/scr_get_input.yy",},"order":4,},
     {"id":{"name":"scr_player_run","path":"scripts/scr_player_run/scr_player_run.yy",},"order":2,},
+    {"id":{"name":"scr_player_ctrl","path":"scripts/scr_player_ctrl/scr_player_ctrl.yy",},"order":5,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":0,},
     {"id":{"name":"Stonepodt2","path":"sprites/Stonepodt2/Stonepodt2.yy",},"order":1,},
@@ -34,6 +45,7 @@
     {"id":{"name":"scr_collision","path":"scripts/scr_collision/scr_collision.yy",},"order":2,},
     {"id":{"name":"move_only","path":"scripts/move_only/move_only.yy",},"order":3,},
     {"id":{"name":"apply_gravity","path":"scripts/apply_gravity/apply_gravity.yy",},"order":1,},
+    {"id":{"name":"scr_vfx_dust","path":"scripts/scr_vfx_dust/scr_vfx_dust.yy",},"order":7,},
     {"id":{"name":"sfx_hit1_C2_dry","path":"sounds/sfx_hit1_C2_dry/sfx_hit1_C2_dry.yy",},"order":0,},
     {"id":{"name":"Track2_Scary_Demo_0a","path":"sounds/Track2_Scary_Demo_0a/Track2_Scary_Demo_0a.yy",},"order":1,},
     {"id":{"name":"scr_dust_parts","path":"scripts/scr_dust_parts/scr_dust_parts.yy",},"order":0,},

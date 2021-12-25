@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 // Get input
 hspd = max(keyboard_check(ord("D")), keyboard_check(vk_right)) -
        max(keyboard_check(ord("A")), keyboard_check(vk_left));
@@ -41,3 +42,6 @@ switch (state){
 	case states.jump: scr_player_jump(); break;
 	case states.fall: scr_player_fall(); break;
 }
+=======
+scr_player_ctrl(self);
+>>>>>>> Stashed changes
