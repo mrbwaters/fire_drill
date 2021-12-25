@@ -11,8 +11,10 @@ enum states {
 
 state = states.idle;
 
+run_spd = 8;
+
 // Jump height
-jspd = 10;
+jump_spd = 10;
 t_float = .2*power(10,3); //delay before applying gravity
 t_jump=0; 
 
