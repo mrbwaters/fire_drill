@@ -7,5 +7,6 @@ function scr_player_run(){
 	// Begin to fall if jumps horizontally
 	if (current_time > t_jump + t_float) apply_gravity();
 	
+//	on_ground=true;
 	move_and_collide();
 }

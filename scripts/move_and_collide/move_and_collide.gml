@@ -11,7 +11,7 @@ function move_and_collide(){
 		hspd = 0;
 		
 	}
-	x += hspd;
+	x += hspd * delta_time*60/1000000;
 	
 	if (vertical_collision)
 	{
@@ -27,5 +27,7 @@ function move_and_collide(){
 			}
 		}
 	}
-	y += vspd;
+	y += vspd * delta_time*60/1000000;
+	
+	//show_debug_message(string(delta_time))
 }

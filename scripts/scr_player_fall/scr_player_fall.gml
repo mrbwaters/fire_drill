@@ -5,6 +5,4 @@ function scr_player_fall(){
 	apply_gravity();
 	move_and_collide();
 	
-	// This might be bug here
-	if (vspd != 0) state = states.fall;
 }
