@@ -1,6 +1,8 @@
+// Script assets have changed for v2.3.0 see
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function apply_gravity(){
 	
 	// Govern physics of the world here
-	grav = 0.00015 * delta_time; //This means objects fall at a constant rate - not like reality
-	vsp = min(vsp+grav, vsp_max);
+	grav = .00015*delta_time;
+	vspd = min(vspd+grav, vspdMax);
 }
