@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function move_only(){
-	x += hspd * delta_time*60/1000000;;
-	y += vspd * delta_time*60/1000000;;
+	x += hspd * delta_time*60/1000000;
+	y += vspd * delta_time*60/1000000;
 }
