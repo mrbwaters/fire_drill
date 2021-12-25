@@ -20,6 +20,7 @@
     {"id":{"name":"Track4_Adventure_Demo_0a","path":"sounds/Track4_Adventure_Demo_0a/Track4_Adventure_Demo_0a.yy",},"order":3,},
     {"id":{"name":"meta_obj_wall","path":"objects/meta_obj_wall/meta_obj_wall.yy",},"order":0,},
     {"id":{"name":"sfx_hit1_C3_rev","path":"sounds/sfx_hit1_C3_rev/sfx_hit1_C3_rev.yy",},"order":3,},
+    {"id":{"name":"scr_get_input","path":"scripts/scr_get_input/scr_get_input.yy",},"order":4,},
     {"id":{"name":"scr_player_run","path":"scripts/scr_player_run/scr_player_run.yy",},"order":2,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":0,},
