@@ -16,16 +16,16 @@ function move_and_collide(){
 		}
 	x += hspd;
 	
-	if(move_y != 0) {
-			if(place_meeting(x, y + move_y, meta_collision)) {
+	if(vspd != 0) {
+			if(place_meeting(x, y + vspd, meta_collision)) {
 				repeat(abs(hspd)) {
-					if(!place_meeting( x, y + sign(move_y), meta_collision)) {
-						y += sign(move_y);
+					if(!place_meeting( x, y + sign(vspd), meta_collision)) {
+						y += sign(vspd);
 					}	else {
 						break;
 					}
 				}
-				move_y = 0;
+				vspd = 0;
 				if (!on_ground) {
 					on_ground = true;
 					audio_play_sound(sfx_thud1_C2_dry,4,false);
