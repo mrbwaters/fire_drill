@@ -11,6 +11,7 @@
     {"id":{"name":"scr_player_idle","path":"scripts/scr_player_idle/scr_player_idle.yy",},"order":1,},
     {"id":{"name":"spr_npc","path":"sprites/spr_npc/spr_npc.yy",},"order":4,},
     {"id":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},"order":1,},
+    {"id":{"name":"obj_platform_move","path":"objects/obj_platform_move/obj_platform_move.yy",},"order":7,},
     {"id":{"name":"Stonesupport","path":"sprites/Stonesupport/Stonesupport.yy",},"order":2,},
     {"id":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"order":6,},
     {"id":{"name":"Track3_Calm_Demo_0a","path":"sounds/Track3_Calm_Demo_0a/Track3_Calm_Demo_0a.yy",},"order":2,},
