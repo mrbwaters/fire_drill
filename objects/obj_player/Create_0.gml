@@ -14,20 +14,29 @@ enum states {
 state = states.idle;
 
 // Movement coefficients
-jspd_max	= 8;
-hspd_max	= 5;
+jspd_max = 8;
+hspd_max = 5;
 
-t_float		= 300;	// Delay time (in ms? [in 1/60 of a secs]) for gliding before applying gravity
-t_jump		= 0;	// Placeholder value for initial time since last jump
-v_fallmax	= 4;	// max fall velocity
-v_climb		= 3;	// climbing velocity
-v_run		= 5;	// running velocity
-a_grav		= 0.0075; // gravity acceleration
+<<<<<<< Updated upstream
+t_float = 250; //Delay time (in ms?) for gliding before applying gravity
+t_jump=0; 
+v_fallmax = 4;
+v_climb=3;
+v_run = 5;
+a_grav = .000075;
+=======
+t_float = 250;	//Delay time (in ms?) for gliding before applying gravity
+t_jump = 0;		// Placeholder value for initial time since last jump
+v_fallmax = 4;	// max fall velocity
+v_climb=3;		// climbing velocity
+v_run = 5;		// running velocity
+a_grav = .000075; // gravity acceleration
+>>>>>>> Stashed changes
 
-on_ground	= false;
-on_ladder	= false;
+on_ground=false;	//set initial value
+on_ladder=false;	//set initial value
 
-// Turn off texture interpolation
+// Turn off texture intterpolation
 gpu_set_texfilter(false);
 
 // Start Background Music
