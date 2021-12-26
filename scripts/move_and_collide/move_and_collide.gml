@@ -30,8 +30,8 @@ function move_and_collide(){
 					on_ground = true;
 					audio_play_sound(sfx_thud1_C2_dry,4,false);
 					for(var ii=0;ii<10;ii++) {
-						instance_create_layer(x + 32, y + 32, "Front", obj_dust);
-						instance_create_layer(x - 32, y + 32, "Front", obj_dust);
+						instance_create_layer(x + 64, y + 64, "Front", obj_dust);
+						instance_create_layer(x, y + 64, "Front", obj_dust);
 					}
 				}
 			}
