@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function move_and_collide(){
-var tol = meta_game.grid_scale/100;
+var tol = meta_game.grid_scale/200;
 
 var x_test = x + hspd * meta_game.t_scale * meta_game.grid_scale * delta_time*60/1000000;
 var y_test = y + vspd * meta_game.t_scale * meta_game.grid_scale * delta_time*60/1000000;
@@ -47,7 +47,7 @@ var _num = instance_place_list(x_test, y, meta_collision,_list_col_x, false);
 	
 	on_ground = false
 	on_ground = collision_line(x_new + tol,y_new + meta_game.grid_scale + 2 * tol, x_new + meta_game.grid_scale - tol, y_new + meta_game.grid_scale + 2 * tol, meta_collision, false, true);
-	//on_ground = (on_ground!=0)
+	on_ground = (on_ground>0)
 	
 	on_ladder = false;
 	on_ladder = place_meeting(x_new,y_new, obj_ladder);

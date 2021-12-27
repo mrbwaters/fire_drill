@@ -46,7 +46,7 @@ function update_player_state() {
 		if (!keyboard_check(vk_space)) state = states.fall;
 	
 		// Jump for the t_float duration and then being fall
-		if (current_time > t_jump + t_float) state = states.fall;
+		if (current_time > t_jump + t_float / meta_game.t_scale) state = states.fall;
 		
 		if (on_ground) state = states.idle;
 	}

@@ -3,7 +3,7 @@ first_room	= rm_1;
 testing		= false;
 
 //Physics Globals
-t_scale = 1; //Global Time Scale
+t_scale = 0.5; //Global Time Scale
 grid_scale = 16; //Global Grid Scale
 
 // Turn off texture interpolation
