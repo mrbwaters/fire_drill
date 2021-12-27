@@ -1,45 +1,44 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function move_and_collide(){	
-	//Collision checks with collision objects
-	if(hspd != 0) {
-			if(place_meeting(x + hspd, y, meta_collision)) {
-				repeat(abs(hspd)) {
-					if(!place_meeting(x + sign(hspd), y, meta_collision)) {
-						x += sign(hspd);
-					}	else {
-						break;
-					}
-				}
-				hspd = 0;
-			}
-		}
-	x += hspd;
+function move_and_collide(){
+tol = meta_game.grid_scale/10;
+
+x_test= x + hspd * meta_game.t_scale * meta_game.grid_scale * delta_time*60/1000000;
+y_test= y + hspd * meta_game.t_scale * meta_game.grid_scale * delta_time*60/1000000;
+
+// Check Collisions		
+var _inst = instance_place(x_test, y_test, meta_collision);
 	
-	if(vspd != 0) {
-			if(place_meeting(x, y + vspd, meta_collision)) {
-				repeat(abs(hspd)) {
-					if(!place_meeting( x, y + sign(vspd), meta_collision)) {
-						y += sign(vspd);
-					}	else {
-						break;
-					}
-				}
-				vspd = 0;
-				if (!on_ground) {
-					on_ground = true;
-					audio_play_sound(sfx_thud1_C2_dry,4,false);
-					for(var ii=0;ii<10;ii++) {
-						var hh = sprite_height;
-						var ww = sprite_width;
-						instance_create_layer(x + ww, y + hh, "Front", obj_dust);
-						instance_create_layer(x, y + hh, "Front", obj_dust);
-					}
-				}
-			}
+	if (_inst == noone) {
+		x_new = x_test;
+		y_new = y_test;
 	}
-	y += vspd * delta_time*60/1000000;
+	
+	if (_inst != noone)
+	{
+		dx = _inst.x - x;
+		dy = _inst.y - y;
+		if (dx<dy) {
+			x_new = _inst.x - meta_game.grid_scale;
+			y_new = y_test;
+		}
+		if (dx>dy) {
+			x_new = x_test;
+			y_new = _inst.y - meta_game.grid_scale;
+		}
+		
+		if (dx==dy) {
+			x_new = _inst.x - meta_game.grid_scale;
+			y_new = _inst.y - meta_game.grid_scale;
+		}
+	}
+
+	on_ground = false
+	on_ground = collision_line(x_new - meta_game.grid_scale/2 ,y_new + meta_game.grid_scale/2 + tol, x_new + meta_game.grid_scale/2 , y_new + meta_game.grid_scale/2 + tol, meta_collision, false, true) != 0;
 	
 	on_ladder = false;
-	on_ladder = place_meeting(round(x+hspd),round(y), obj_ladder) | place_meeting(round(x),round(y+vspd), obj_ladder);
+	on_ladder = place_meeting(x_new,y_new, obj_ladder);
+	
+	x=x_new;
+	y=y_new;
 }
