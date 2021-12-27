@@ -1,5 +1,5 @@
 //META
-first_room	= rm_2;
+first_room	= rm_1;
 testing		= false;
 
 // Start Background Music
