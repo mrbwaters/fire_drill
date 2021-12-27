@@ -1,0 +1,1 @@
+if destination != noone then room_goto(destination);
