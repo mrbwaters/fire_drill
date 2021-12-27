@@ -6,7 +6,7 @@ get_player_input();
 
 apply_player_input();
 apply_player_state();
-move_and_collide()
+move_and_collide();
 update_player_state();
 
 // Print Debug Messages
