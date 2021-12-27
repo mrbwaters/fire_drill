@@ -9,6 +9,7 @@ function scr_get_input() {
 	key_right			= keyboard_check(vk_right) or keyboard_check(ord("D"));
 	key_up				= keyboard_check(vk_up) or keyboard_check(ord("W"));
 	key_down			= keyboard_check(vk_down) or keyboard_check(ord("S"));
+	key_space			= keyboard_check(vk_space); 
 	key_jump			= keyboard_check_pressed(vk_space);
 	
 	//Numbers

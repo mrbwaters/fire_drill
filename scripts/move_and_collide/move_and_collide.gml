@@ -1,45 +1,57 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function move_and_collide(){	
-	//Collision checks with collision objects
-	if(hspd != 0) {
-			if(place_meeting(x + hspd, y, meta_collision)) {
-				repeat(abs(hspd)) {
-					if(!place_meeting(x + sign(hspd), y, meta_collision)) {
-						x += sign(hspd);
-					}	else {
-						break;
-					}
-				}
-				hspd = 0;
+function move_and_collide(){
+var tol = meta_game.grid_scale/200;
+
+var x_test = x + hspd * meta_game.t_scale * meta_game.grid_scale * delta_time*60/1000000;
+var y_test = y + vspd * meta_game.t_scale * meta_game.grid_scale * delta_time*60/1000000;
+
+var x_new = x_test;
+var y_new = y_test;
+		
+// Check Collisions		
+var _list_col_x= ds_list_create();
+var _num = instance_place_list(x_test, y, meta_collision,_list_col_x, false);	
+	if (_num == 0) {
+		show_debug_message("No X Collision");
+	}
+	
+	if (_num > 0)
+	{
+		for (var ii = 0; ii < _num; ++ii) {
+			var dx = _list_col_x[| ii].x - x;
+			var dy = _list_col_x[| ii].y - y;
+		
+			show_debug_message(">>>X Collision  dx=" + string(dx) + " dy=" + string(dy));
+			x_new = _list_col_x[| ii].x - sign(dx) * meta_game.grid_scale;
+			y_new = y_test;
+		}
+	}
+	
+	// check vert collisions
+	var _list_col_y = ds_list_create();
+	var _num = instance_place_list(x_new, y_test, meta_collision,_list_col_y, false);	
+	if (_num == 0) {
+		show_debug_message("No Y Collision");
+	}
+	if (_num > 0)
+	{
+		for (var ii = 0; ii < _num; ++ii) {
+			var dx = _list_col_y[| ii].x - x;
+			var dy = _list_col_y[| ii].y - y;
+		
+			show_debug_message(">>>Y Collision  dx=" + string(dx) + " dy=" + string(dy));
+			y_new = _list_col_y[| ii].y - sign(dy) * (meta_game.grid_scale + tol);
 			}
 		}
-	x += hspd;
 	
-	if(vspd != 0) {
-			if(place_meeting(x, y + vspd, meta_collision)) {
-				repeat(abs(hspd)) {
-					if(!place_meeting( x, y + sign(vspd), meta_collision)) {
-						y += sign(vspd);
-					}	else {
-						break;
-					}
-				}
-				vspd = 0;
-				if (!on_ground) {
-					on_ground = true;
-					audio_play_sound(sfx_thud1_C2_dry,4,false);
-					for(var ii=0;ii<10;ii++) {
-						var hh = sprite_height;
-						var ww = sprite_width;
-						instance_create_layer(x + ww, y + hh, "Front", obj_dust);
-						instance_create_layer(x, y + hh, "Front", obj_dust);
-					}
-				}
-			}
-	}
-	y += vspd * delta_time*60/1000000;
+	on_ground = false
+	on_ground = collision_line(x_new + tol,y_new + meta_game.grid_scale + 2 * tol, x_new + meta_game.grid_scale - tol, y_new + meta_game.grid_scale + 2 * tol, meta_collision, false, true);
+	on_ground = (on_ground>0)
 	
 	on_ladder = false;
-	on_ladder = place_meeting(round(x+hspd),round(y), obj_ladder) | place_meeting(round(x),round(y+vspd), obj_ladder);
+	on_ladder = place_meeting(x_new,y_new, obj_ladder);
+	
+	x=x_new;
+	y=y_new;
 }
