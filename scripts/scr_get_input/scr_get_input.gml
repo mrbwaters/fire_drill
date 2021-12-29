@@ -16,10 +16,14 @@ function scr_get_input() {
 	var _dev = 0;
 	if gamepad_is_connected(_dev) {
 		var _deadzone = 0.3;
-		key_left			= gamepad_axis_value(_dev, gp_axislh) < -_deadzone or key_left;
-		key_right			= gamepad_axis_value(_dev, gp_axislh) > _deadzone or key_right;
-		key_up				= gamepad_axis_value(_dev, gp_axislv) < -_deadzone or key_up;
-		key_down			= gamepad_axis_value(_dev, gp_axislv) > _deadzone or key_down;
+		key_left			= gamepad_axis_value(_dev, gp_axislh) < -_deadzone or
+							gamepad_button_check(_dev, gp_padl) or key_left;
+		key_right			= gamepad_axis_value(_dev, gp_axislh) > _deadzone or
+							gamepad_button_check(_dev, gp_padr) or key_right;
+		key_up				= gamepad_axis_value(_dev, gp_axislv) < -_deadzone or 
+							gamepad_button_check(_dev, gp_padu) or key_up;
+		key_down			= gamepad_axis_value(_dev, gp_axislv) > _deadzone or
+							gamepad_button_check(_dev, gp_padd) or key_down;
 		key_jump			= gamepad_button_check_pressed(_dev, gp_face1) or key_jump;
 		key_action			= gamepad_button_check(_dev, gp_face3) or key_action;
 	}
