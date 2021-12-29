@@ -22,6 +22,22 @@ function scr_player_climb(){
 	hspd = 0;
 	vspd = v_climb * vert_input;
 	
+	
+	// Nudge player towards center of ladder
+	
+	var _ladder = instance_place(x,y,obj_ladder)
+	var tol=1 / meta_game.grid_scale;
+	
+	if _ladder != noone {
+		
+		if (abs(x/meta_game.grid_scale - round(_ladder.x/meta_game.grid_scale)) > tol) {
+			hspd = - sign(x/meta_game.grid_scale - round(_ladder.x/meta_game.grid_scale)) * 1.5 * tol;
+			}
+		if (abs(x/meta_game.grid_scale - round(_ladder.x/meta_game.grid_scale)) <= tol) {
+			x=_ladder.x 
+			}
+		}
+	
 	// Transition to states
 	
 	// Change state to run
