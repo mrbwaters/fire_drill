@@ -20,6 +20,12 @@ function scr_player_idle(){
 			Flag - after a run or fall, idle state is triggered and then player can enter Flag state from a key press
 			Pause - any state should be able to trigger the Pause state
 	*/
+	// Always do prior_state checks before setting the prior_state
+	
+	// Get pushed off moving object Last state is idle and vspd > 0 Change state to Fall
+	if (prior_state == states.idle and vspd > 0) {
+		state = states.fall;
+	}
 	
 	// Save prior state
 	prior_state = state;
@@ -28,8 +34,13 @@ function scr_player_idle(){
 	hspd = 0;
 	vspd = 0;
 	
+	// Local variable for moving platform logic
+	on_moving_platform = place_meeting(x,y + 1, obj_platform_move);
+	
 	//Stay on moving platform - If on top bounding box of obj_platform_move then match hspd of target object
-	// Logic here
+	if (on_moving_platform) {
+		hspd = obj_platform_move.hspd;
+	}
 
 	// Transisitons
 	// On top bounding box of obj_wall (logic for on_ground) then change state to Run
@@ -39,6 +50,9 @@ function scr_player_idle(){
 	
 	// Change state to Jump
 	if (jump_input != 0) {
+		// Reset hspd to 0 if on a moving platform and attempting to jump rather than carrying the momentum
+		if (on_moving_platform) hspd = 0;
+		
 		// Start the jump timer here
 		t_jump = current_time
 		state = states.jump;	
@@ -47,10 +61,5 @@ function scr_player_idle(){
 	// Collision with obj_ladder and input is vspd is up or down then Change state to Climb
 	if ( place_meeting(x,y, obj_ladder) and vert_input != 0 ) {
 		state = states.climb;
-	}
-	
-	// Get pushed off moving object Last state is idle and vspd > 0 Change state to Fall
-	if (prior_state == states.idle and vspd > 0) {
-		state = states.fall;
 	}
 }
