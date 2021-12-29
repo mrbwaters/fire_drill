@@ -1,13 +1,43 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_player_run(){
-	// Reset player to idle when stopped running
-	if (hspd == 0 and on_ground) state = states.idle;
-	if (vspd == 0 and state != states.idle) state = states.idle;
+	/*
+	Description
+		User input is converted to horizontal movement
+	Transition to states
+		Idle - if a player collides with an object they should stop running
+		Climb - a player can enter climb state after a collision with a ladder
+		Jump - a player can enter the Jump sate after a key press
+		Fall - a player can enter the Fall state when vertical speed changes to a positive value (like when walking off a ledge or a ladder)
+		Meta Actions - for simpler gameplay, idle might be the only state we want to be in to do other actions (except for Pause)
+			Flag - player should be able to drop a flag while in run state
+			Pause - player should be able to enter Pause from any state
+	*/
+	// Save prior state
+	prior_state = state;
 	
-	// Begin to fall if jumps horizontally
-	if (current_time > t_jump + t_float) apply_gravity();
+	// Get horizontal speed for movement when on top of bounding box for obj_wall and when vspd == 0
+	// Add logic here 
+	hspd = v_run * horiz_input;
 	
-    //on_ground=true;
-	move_and_collide();
+	// Transisitons
+	// If top of bounding box obj_wall and horiz_input == 0 Change state to Idle
+	if (horiz_input == 0) {
+		state = states.idle;
+	}
+	
+	// If collision with ladder and key UP or DOWN Change state to Climb
+	// Logic here
+	
+	// Change state to Jump
+	if (jump_input != 0) {
+		// Start the jump timer here
+		t_jump = current_time
+		state = states.jump;	
+	}
+	
+	// If vspd > 0 Change state to Fall
+	if (vspd > 0) {
+		state = states.fall;
+	}
 }

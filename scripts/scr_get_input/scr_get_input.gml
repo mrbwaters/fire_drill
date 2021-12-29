@@ -23,4 +23,9 @@ function scr_get_input() {
 	key_8				= keyboard_check_pressed(ord("8"));
 	key_9				= keyboard_check_pressed(ord("9"));
 	key_0				= keyboard_check_pressed(ord("0"));
+	
+	//Convert Input into variables used for movement
+	horiz_input = key_right - key_left;
+	vert_input = key_down-key_up;
+	jump_input = key_jump;
 }

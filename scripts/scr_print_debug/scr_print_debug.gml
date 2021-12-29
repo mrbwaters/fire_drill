@@ -2,5 +2,5 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 function print_debug_step() {
-	show_debug_message("DEBUG: STATE >>> " + string(state) + "  ONLADDER >>> " + string(on_ladder)+ "  ONGROUND >>> " + string(on_ground));	
+	show_debug_message("DEBUG: STATE >>> " + string(state) + "  PRIOR_STATE >>> " + string(prior_state));	
 }
