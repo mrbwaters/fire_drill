@@ -1,5 +1,32 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_player_jump(){
-	move_and_collide();
+	/*
+	Description
+		Convert player input to vertical movement
+		This state should be considered the arbitrary upward airborne movement (opposite to fall)
+		This should support horizontal movement supplied by user input (this is distinct from the Run state)
+	Transition to states
+		Fall - this should be the only state Jump can trigger
+		Meta Actions - for simpler gameplay, idle might be the only state we want to be in to do other actions (except for Pause)
+			Pause
+	*/
+	
+	// Apply values to key movement variables make sure not to double jump
+	if (prior_state != states.jump) {
+		vspd += -jspd_max;
+		
+		// Change horizontal speed if user input is received for LEFT and RIGHT
+	
+		// Sound and animation
+		audio_play_sound(sfx_hit1_C2_dry,4,false);
+	}
+
+	// Save prior state after the prior state check
+	prior_state = state;
+	
+	// Begin to fall after arbitrary time
+	if (current_time > t_jump + t_float) {
+		state = states.fall;
+	}
 }

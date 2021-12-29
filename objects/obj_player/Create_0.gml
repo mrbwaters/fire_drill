@@ -12,6 +12,7 @@ enum states {
 
 // set initial state
 state = states.idle;
+prior_state =  state;
 
 // Movement coefficients
 jspd_max	= 1/10;
