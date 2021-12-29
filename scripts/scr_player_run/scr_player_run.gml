@@ -13,6 +13,8 @@ function scr_player_run(){
 			Flag - player should be able to drop a flag while in run state
 			Pause - player should be able to enter Pause from any state
 	*/
+	// Always do prior_state checks before setting the prior_state
+	
 	// Save prior state
 	prior_state = state;
 	
@@ -26,8 +28,10 @@ function scr_player_run(){
 		state = states.idle;
 	}
 	
-	// If collision with ladder and key UP or DOWN Change state to Climb
-	// Logic here
+	// If collide with ladder and key pressed is UP Change to Climb
+	if (place_meeting(x,y,obj_ladder) and vert_input < 0) {
+		state = states.climb;	
+	}
 	
 	// Change state to Jump
 	if (jump_input != 0) {
@@ -36,7 +40,7 @@ function scr_player_run(){
 		state = states.jump;	
 	}
 	
-	// If vspd > 0 Change state to Fall
+	// When not on top of something Change state to Fall
 	if (vspd > 0) {
 		state = states.fall;
 	}

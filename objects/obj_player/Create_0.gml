@@ -16,13 +16,10 @@ prior_state =  state;
 
 // Movement coefficients
 jspd_max	= 1/10;
-t_float		= 250;	// Delay time (in ms? [in 1/60 of a secs]) for gliding before applying gravity
+t_float		= 350;	// Delay time (in ms? [in 1/60 of a secs]) for gliding before applying gravity
 t_jump		= 0;	// Placeholder value for initial time since last jump
 v_fallmax	= 2/20;	// max fall velocity
 v_climb		= 1/20;	// climbing velocity
 v_run		= 1/20;	// running velocity
 a_grav		= 0.000075; // gravity acceleration
-
-on_ground	= false;
-on_ladder	= false;
 

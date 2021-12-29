@@ -13,20 +13,23 @@ function scr_player_climb(){
 		Meta Actions - for simpler gameplay, idle might be the only state we want to be in to do other actions (except for Pause)
 			Pause
 	*/
+	// Always do prior_state checks before setting the prior_state
 	
 	// Save prior state
 	prior_state = state;
 	
 	// Assign key variables for movement in the climb state
+	hspd = 0;
 	vspd = v_climb * vert_input;
 	
-	// Make sure to stay in same position while on the ladder when no input is received
-	
 	// Transition to states
+	
 	// Change state to run
+	/* Unwanted behavior, do not do this
 	if (horiz_input != 0) {
 		state = states.run;
 	}
+	*/
 
 	// Change state to Jump
 	if (jump_input != 0) {
@@ -35,5 +38,8 @@ function scr_player_climb(){
 		state = states.jump;	
 	}
 	
-	// Change state to ide at top or bottom of ladder
+	// Change state to idle at top or bottom of ladder
+	if (!place_meeting(x,y,obj_ladder)) {
+		state = states.idle;
+	}
 }

@@ -11,6 +11,7 @@ function scr_player_jump(){
 		Meta Actions - for simpler gameplay, idle might be the only state we want to be in to do other actions (except for Pause)
 			Pause
 	*/
+	// Always do prior_state checks before setting the prior_state
 	
 	// Apply values to key movement variables make sure not to double jump
 	if (prior_state != states.jump) {

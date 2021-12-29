@@ -1,11 +1,14 @@
 {
   "spriteId": {
-    "name": "spr_stone_floor2",
-    "path": "sprites/spr_stone_floor2/spr_stone_floor2.yy",
+    "name": "spr_stone_floor1",
+    "path": "sprites/spr_stone_floor1/spr_stone_floor1.yy",
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_stone_floor1",
+    "path": "sprites/spr_stone_floor1/spr_stone_floor1.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "meta_collision",
