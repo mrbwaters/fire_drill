@@ -35,6 +35,7 @@
     {"id":{"name":"scr_get_input","path":"scripts/scr_get_input/scr_get_input.yy",},"order":4,},
     {"id":{"name":"scr_print_debug","path":"scripts/scr_print_debug/scr_print_debug.yy",},"order":6,},
     {"id":{"name":"scr_player_run","path":"scripts/scr_player_run/scr_player_run.yy",},"order":2,},
+    {"id":{"name":"fnt_dialog","path":"fonts/fnt_dialog/fnt_dialog.yy",},"order":0,},
     {"id":{"name":"scr_player_step","path":"scripts/scr_player_step/scr_player_step.yy",},"order":6,},
     {"id":{"name":"scr_player_climb","path":"scripts/scr_player_climb/scr_player_climb.yy",},"order":5,},
     {"id":{"name":"spr_door","path":"sprites/spr_door/spr_door.yy",},"order":5,},
