@@ -9,20 +9,20 @@ function scr_get_input() {
 	key_right			= keyboard_check(vk_right) or keyboard_check(ord("D"));
 	key_up				= keyboard_check(vk_up) or keyboard_check(ord("W"));
 	key_down			= keyboard_check(vk_down) or keyboard_check(ord("S"));
-	key_space			= keyboard_check(vk_space); 
 	key_jump			= keyboard_check_pressed(vk_space);
+	key_action			= keyboard_check(ord("E"));
 	
-	//Numbers
-	key_1				= keyboard_check_pressed(ord("1"));
-	key_2				= keyboard_check_pressed(ord("2"));
-	key_3				= keyboard_check_pressed(ord("3"));
-	key_4				= keyboard_check_pressed(ord("4"));
-	key_5				= keyboard_check_pressed(ord("5"));
-	key_6				= keyboard_check_pressed(ord("6"));
-	key_7				= keyboard_check_pressed(ord("7"));
-	key_8				= keyboard_check_pressed(ord("8"));
-	key_9				= keyboard_check_pressed(ord("9"));
-	key_0				= keyboard_check_pressed(ord("0"));
+	//GAMEPAD
+	var _dev = 0;
+	if gamepad_is_connected(_dev) {
+		var _deadzone = 0.3;
+		key_left			= gamepad_axis_value(_dev, gp_axislh) < -_deadzone or key_left;
+		key_right			= gamepad_axis_value(_dev, gp_axislh) > _deadzone or key_right;
+		key_up				= gamepad_axis_value(_dev, gp_axislv) < -_deadzone or key_up;
+		key_down			= gamepad_axis_value(_dev, gp_axislv) > _deadzone or key_down;
+		key_jump			= gamepad_button_check_pressed(_dev, gp_face1) or key_jump;
+		key_action			= gamepad_button_check(_dev, gp_face2) or key_action;
+	}
 	
 	//Convert Input into variables used for movement
 	horiz_input = key_right - key_left;
