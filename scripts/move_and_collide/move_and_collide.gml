@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function move_and_collide(){
-	var tol = meta_game.grid_scale/200;
+	var tol = meta_game.grid_scale/100;
 
 	var x_test = x + hspd * meta_game.t_scale * meta_game.grid_scale * delta_time*60/1000000;
 	var y_test = y + vspd * meta_game.t_scale * meta_game.grid_scale * delta_time*60/1000000;
@@ -32,7 +32,7 @@ function move_and_collide(){
 			var dy = _list_col_x[| ii].y - y;
 		
 			show_debug_message(">>>X Collision  dx=" + string(dx) + " dy=" + string(dy));
-			x_new = _list_col_x[| ii].x - sign(dx) * meta_game.grid_scale;
+			x_new = _list_col_x[| ii].x - sign(dx) * (meta_game.grid_scale-1);
 			y_new = y_test;
 		}
 	}
@@ -56,19 +56,15 @@ function move_and_collide(){
 	
 	// Apply gravity when not colliding with an object and not currently jumping
 	on_ground = false
-	on_ground = collision_line(x_new + tol,y_new + meta_game.grid_scale + 2 * tol, x_new + meta_game.grid_scale - tol, y_new + meta_game.grid_scale + 2 * tol, meta_collision, false, true);
+	on_ground = collision_line(x + tol,y + meta_game.grid_scale + 2 * tol, x + meta_game.grid_scale - tol, y + meta_game.grid_scale + 2 * tol, meta_collision, false, true);
 	on_ground = (on_ground>0)
 	on_ladder_top = false
-	on_ladder_top = collision_line(x_new + tol,y_new + meta_game.grid_scale + 2 * tol, x_new + meta_game.grid_scale - tol, y_new + meta_game.grid_scale + 2 * tol, obj_ladder, false, true);
+	on_ladder_top = collision_line(x + tol,y + meta_game.grid_scale + 2 * tol, x + meta_game.grid_scale - tol, y + meta_game.grid_scale + 2 * tol, obj_ladder, false, true);
 	on_ladder_top = (on_ladder_top>0)
 
-	
-	if (!on_ground and ! on_ladder_top and state != states.jump) {
+	if (!on_ground and !on_ladder_top and state != states.jump) {
 		apply_gravity();
 	}
-	
-	on_ladder_top = false
-	on_ladder_top = collision_line(x_new + tol,y_new + meta_game.grid_scale + 2 * tol, x_new + meta_game.grid_scale - tol, y_new + meta_game.grid_scale + 2 * tol, obj_ladder, false, true);
 	
 	// Apply the movement
 	x=x_new;
