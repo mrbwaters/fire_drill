@@ -13,6 +13,8 @@ function scr_player_step(){
 	      collide()
 	      ??apply_gravity() not sure when where to do this yet??
 	*/
+	move_and_collide();
+
 
 	// Print Debug Messages
 	print_debug_step();
