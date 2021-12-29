@@ -9,7 +9,16 @@ function move_and_collide(){
 	var x_new = x_test;
 	var y_new = y_test;
 		
-	// Check Collisions		
+	//Check for colission with spikes	
+	on_spike = false;
+	on_spike = instance_place(x_test, y_test, meta_damage);		
+	
+	if on_spike {
+		player_death()
+		return
+	}
+	
+	// Check Collisions	with floors and walls	
 	var _list_col_x= ds_list_create();
 	var _num = instance_place_list(x_test, y, meta_collision,_list_col_x, false);	
 	if (_num == 0) {
@@ -53,6 +62,9 @@ function move_and_collide(){
 	if (!on_ground and state != states.jump) {
 		apply_gravity();
 	}
+	
+	
+
 	
 	// Apply the movement
 	x=x_new;

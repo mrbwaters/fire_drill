@@ -18,3 +18,9 @@ function apply_exit_game() {
 function print_debug_console() {
 	if (state != 0) show_debug_message("DEBUG: STATE >>> " + string(state) + "  PRIOR STATE >>> " + string(prior_state));	
 }
+
+
+function player_death() {
+	x = x_start
+	y = y_start	
+}
