@@ -58,8 +58,12 @@ function scr_player_idle(){
 		state = states.jump;	
 	}
 	
-	// Collision with obj_ladder and input is vspd is up or down then Change state to Climb
-	if ( place_meeting(x,y, obj_ladder) and vert_input != 0 ) {
+	// Collision with obj_ladder and input is vspd is up then Change state to Climb
+	if (place_meeting(x,y, obj_ladder) and vert_input < 0 ) {
+		state = states.climb;
+	}
+	// Obj_ladder below and input is vspd is down then Change state to Climb
+	if (place_meeting(x,y+1, obj_ladder) and vert_input > 0 ) {
 		state = states.climb;
 	}
 }

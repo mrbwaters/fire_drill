@@ -55,7 +55,7 @@ function scr_player_climb(){
 	}
 	
 	// Change state to idle at top or bottom of ladder
-	if (!place_meeting(x,y,obj_ladder)) {
+	if (!place_meeting(x,y,obj_ladder) & place_meeting(x,y+1,obj_ladder)) {
 		state = states.idle;
 	}
 }
