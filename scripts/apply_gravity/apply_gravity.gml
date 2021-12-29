@@ -5,5 +5,5 @@ function apply_gravity(){
 	// Govern physics of the world here
 	
 	
-	vspd = min(vspd + a_grav*delta_time*meta_game.t_scale, obj_player.v_fallmax);
+	vspd = min(vspd + a_grav*delta_time*meta_game.t_scale, obj_pc.v_fallmax);
 }

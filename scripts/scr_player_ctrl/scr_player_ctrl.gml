@@ -1,4 +1,4 @@
-// These functions are used in obj_player Step event.
+// These functions are used in obj_pc Step event.
 // Apply physics based on player state
 function apply_player_state() {
 	switch (state){

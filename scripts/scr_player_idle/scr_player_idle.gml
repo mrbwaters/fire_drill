@@ -5,7 +5,7 @@ function scr_player_idle(){
 	Description
 		Do nothing
 		Stay located in same position (like resting on ground or on a ladder the player does not move)
-		If there is a collision on top of a moving obj, then match movement with moving box - this will also need to consider what happens if your on a moving box and then collide with a wall (obj_player must get pushed off the moving obj)
+		If there is a collision on top of a moving obj, then match movement with moving box - this will also need to consider what happens if your on a moving box and then collide with a wall (obj_pc must get pushed off the moving obj)
 		Apply gravity and collisions when in idle to be pushed off a moving object
 		(To Be Handled in Climb state) If there is a collision with a ladder then do no apply gravity to maintain a static vertical position when no user input is supplied
 	Transition to states
