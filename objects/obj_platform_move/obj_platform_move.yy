@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_wall",
-    "path": "sprites/spr_wall/spr_wall.yy",
+    "name": "spr_platform_move",
+    "path": "sprites/spr_platform_move/spr_platform_move.yy",
   },
   "solid": false,
   "visible": true,

@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "spr_npc",
-    "path": "sprites/spr_npc/spr_npc.yy",
+    "name": "spr_weekwar",
+    "path": "sprites/spr_weekwar/spr_weekwar.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "meta_collision",
-    "path": "objects/meta_collision/meta_collision.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -35,7 +32,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_npc",
+  "name": "obj_weekwar",
   "tags": [],
   "resourceType": "GMObject",
 }
