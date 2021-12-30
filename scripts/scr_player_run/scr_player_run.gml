@@ -9,6 +9,7 @@ function scr_player_run(){
 		Climb - a player can enter climb state after a collision with a ladder
 		Jump - a player can enter the Jump sate after a key press
 		Fall - a player can enter the Fall state when vertical speed changes to a positive value (like when walking off a ledge or a ladder)
+		Death - a pc should enter dead state after a left or right collision with an enemy
 		Meta Actions - for simpler gameplay, idle might be the only state we want to be in to do other actions (except for Pause)
 			Flag - player should be able to drop a flag while in run state
 			Pause - player should be able to enter Pause from any state
@@ -44,4 +45,12 @@ function scr_player_run(){
 	if (vspd > 0) {
 		state = states.fall;
 	}
+	
+	// Change to death state
+	// Spike collision
+	if (instance_place(x, y, meta_damage)) {
+		state = states.death;
+	}
+	// Enemy collision
+	// Wall squish
 }

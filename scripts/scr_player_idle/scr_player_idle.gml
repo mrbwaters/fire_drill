@@ -13,7 +13,7 @@ function scr_player_idle(){
 		Jump - can jump from idle state after user input is supplied
 		Climb - can climb from idle state after a collision with ladder is made
 		Fall - this is triggered when you get pushed off a moving object and the player did not jump in time
-	
+	    Death - a pc should enter death state if squished into a wall by moving platform or collision left or right with enemy
 		Meta Actions - for simpler gameplay, idle might be the only state we want to be in to do other actions (except for Pause)
 			Talk - after a collision with NPC, idle state is triggered and then Talk state can be entered from key press
 			Interact - after a collision with interactive object, idle state is triggered and then Interact state can be entered from key press
@@ -23,9 +23,14 @@ function scr_player_idle(){
 	// Always do prior_state checks before setting the prior_state
 	
 	// Get pushed off moving object Last state is idle and vspd > 0 Change state to Fall
-	if (prior_state == states.idle and vspd > 0) {
+	if (prior_state == states.idle and vspd > 0 and coords[?"dy"] != 0) {
 		state = states.fall;
 	}
+	
+	// TODO Fall from idle or apply gravity in move function
+	//if (prior_state == states.idle and coords[?"dx"] == 0 and coords[?"dy"] == 0) {
+	//	state = states.fall;
+	//}
 	
 	// Save prior state
 	prior_state = state;
@@ -58,12 +63,17 @@ function scr_player_idle(){
 		state = states.jump;	
 	}
 	
-	// Collision with obj_ladder and input is vspd is up then Change state to Climb
+	// Collision with obj_ladder and input is up then Change state to Climb
 	if (place_meeting(x,y, obj_ladder) and vert_input < 0 ) {
 		state = states.climb;
 	}
-	// Obj_ladder below and input is vspd is down then Change state to Climb
-	if (place_meeting(x,y+1, obj_ladder) and vert_input > 0 ) {
+	
+	// Obj_ladder below and input is vspd is down then Change state to Climb make sure not colliding with the ground
+	if (place_meeting(x,y+1, obj_ladder) and vert_input > 0 and coords[?"dy"] == 0) {
 		state = states.climb;
 	}
+	
+	// Change to death state
+	// Wall squish
+	// Enemy collision
 }
