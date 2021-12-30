@@ -15,6 +15,17 @@ function scr_player_climb(){
 	*/
 	// Always do prior_state checks before setting the prior_state
 	
+	//Change to idle at bottom of ladder
+	if (coords[?"dy"] != 0 and vspd > 0 and prior_state = states.climb) {
+		state = states.idle;
+	}
+	
+	//Change to idle at top of ladder
+	if (coords[?"dy"] == 0 and vspd < 0 and prior_state = states.climb and !place_meeting(x,y, obj_ladder)) {
+		vspd = 0;
+		state = states.idle;
+	}
+	
 	// Save prior state
 	prior_state = state;
 	
@@ -22,9 +33,7 @@ function scr_player_climb(){
 	hspd = 0;
 	vspd = v_climb * vert_input;
 	
-	
 	// Nudge player towards center of ladder
-	
 	var _ladder = instance_place(x,y,obj_ladder)
 	var tol=1 / meta_game.grid_scale;
 	
@@ -39,23 +48,10 @@ function scr_player_climb(){
 		}
 	
 	// Transition to states
-	
-	// Change state to run
-	/* Unwanted behavior, do not do this
-	if (horiz_input != 0) {
-		state = states.run;
-	}
-	*/
-
 	// Change state to Jump
 	if (jump_input != 0) {
 		// Start the jump timer here
 		t_jump = current_time;
 		state = states.jump;	
-	}
-	
-	// Change state to idle at top or bottom of ladder
-	if (!place_meeting(x,y,obj_ladder) & place_meeting(x,y+1,obj_ladder)) {
-		state = states.idle;
 	}
 }

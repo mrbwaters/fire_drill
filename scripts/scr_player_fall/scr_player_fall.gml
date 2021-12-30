@@ -8,6 +8,7 @@ function scr_player_fall(){
 	Transition to states
 		Idle - a player should enter into an idle state after vertical movement has reached 0 (you can have collision with wall object but still be falling like a mis-timed jump)
 		Climb - after a collision with a ladder object a player should be able to enter the climb state even if that is from a fall
+		Death - after collision with spikes pc should enter dead state
 		Meta Actions - for simpler gameplay, idle might be the only state we want to be in to do other actions (except for Pause)
 			Pause
 
@@ -32,4 +33,8 @@ function scr_player_fall(){
 		state = states.climb;	
 	}
 
+	// Change to death state
+	if (instance_place(x, y, meta_damage)) {
+		state = states.death;
+	}
 }
