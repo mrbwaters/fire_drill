@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function move_and_collide(){
+function get_collision(target_object){
 	var tol = meta_game.grid_scale/200;
 
 	var x_test = x + hspd * meta_game.t_scale * meta_game.grid_scale * delta_time*60/1000000;
@@ -8,19 +8,13 @@ function move_and_collide(){
 
 	var x_new = x_test;
 	var y_new = y_test;
-		
-	//Check for colission with spikes	
-	on_spike = false;
-	on_spike = instance_place(x_test, y_test, meta_damage);		
 	
-	if on_spike {
-		player_death()
-		return
-	}
+	var dx = 0;
+	var dy = 0;
 	
 	// Check Collisions	with floors and walls	
 	var _list_col_x= ds_list_create();
-	var _num = instance_place_list(x_test, y, meta_collision,_list_col_x, false);	
+	var _num = instance_place_list(x_test, y, target_object,_list_col_x, false);	
 	if (_num == 0) {
 		show_debug_message("No X Collision");
 	}
@@ -37,9 +31,9 @@ function move_and_collide(){
 		}
 	}
 	
-	// check vert collisions
+	// check vert collisions with floors and walls
 	var _list_col_y = ds_list_create();
-	var _num = instance_place_list(x_new, y_test, meta_collision,_list_col_y, false);	
+	var _num = instance_place_list(x_new, y_test, target_object,_list_col_y, false);	
 	if (_num == 0) {
 		show_debug_message("No Y Collision");
 	}
@@ -54,20 +48,12 @@ function move_and_collide(){
 		}
 	}
 	
-	// Apply gravity when not colliding with an object and not currently jumping
-	on_ground = false
-	on_ground = collision_line(x_new + tol,y_new + meta_game.grid_scale + 2 * tol, x_new + meta_game.grid_scale - tol, y_new + meta_game.grid_scale + 2 * tol, meta_collision, false, true);
-	on_ground = (on_ground>0)
-	
-	if (!on_ground and state != states.jump) {
-		apply_gravity();
-	}
-	
-	
+	// Create Map to store results of collision check
+	coords[?"tol"] = tol;
+	coords[?"x_new"] = x_new;
+	coords[?"y_new"] = y_new;
+	coords[?"dx"] = dx;
+	coords[?"dy"] = dy;
 
-	
-	// Apply the movement
-	x=x_new;
-	y=y_new;
-	
+	return coords;
 }

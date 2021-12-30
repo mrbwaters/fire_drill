@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Meta.yy",
   },
   "resourceVersion": "1.0",
-  "name": "move_and_collide",
+  "name": "get_collision",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -7,6 +7,7 @@ function apply_player_state() {
 		case states.jump: scr_player_jump(); break;
 		case states.fall: scr_player_fall(); break;
 		case states.climb: scr_player_climb(); break;
+		case states.death: scr_player_death(); break;
 	}
 }
 	
