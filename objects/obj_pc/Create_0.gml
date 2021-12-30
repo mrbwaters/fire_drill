@@ -1,3 +1,7 @@
+// Start location
+x = meta_game.pcx;
+y = meta_game.pcy;
+
 // Movement Variables
 hspd = 0;
 vspd = 0;
@@ -5,11 +9,11 @@ vspd = 0;
 // Collision variables
 // Create Map to store results of collision check
 coords = ds_map_create();
-coords[?"tol"] = 0;
-coords[?"x_new"] = 0;
-coords[?"y_new"] = 0;
-coords[?"dx"] = 0;
-coords[?"dy"] = 0;
+coords[?"tol"]		= 0;
+coords[?"x_new"]	= 0;
+coords[?"y_new"]	= 0;
+coords[?"dx"]		= 0;
+coords[?"dy"]		= 0;
 
 // Player states
 enum states {
@@ -22,10 +26,11 @@ enum states {
 }
 
 // set initial state
-state = states.idle;
+state		= states.idle;
 prior_state =  state;
-player_init=false;
-init_room = "null";
+player_init = false;
+init_room	= "null";
+
 // Movement coefficients
 jspd_max	= 1/10;
 t_float		= 200/meta_game.t_scale;	// Delay time (in ms? [in 1/60 of a secs]) for gliding before applying gravity
