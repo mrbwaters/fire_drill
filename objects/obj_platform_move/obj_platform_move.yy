@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_platform_move",
-    "path": "sprites/spr_platform_move/spr_platform_move.yy",
+    "name": "spr_testing",
+    "path": "sprites/spr_testing/spr_testing.yy",
   },
   "solid": false,
   "visible": true,
