@@ -29,6 +29,7 @@
     {"id":{"name":"scr_player_fall","path":"scripts/scr_player_fall/scr_player_fall.yy",},"order":0,},
     {"id":{"name":"spr_stone_floor3","path":"sprites/spr_stone_floor3/spr_stone_floor3.yy",},"order":0,},
     {"id":{"name":"Track4_Adventure_Demo_0a","path":"sounds/Track4_Adventure_Demo_0a/Track4_Adventure_Demo_0a.yy",},"order":3,},
+    {"id":{"name":"spr_textbox","path":"sprites/spr_textbox/spr_textbox.yy",},"order":7,},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":4,},
     {"id":{"name":"sfx_hit1_C3_rev","path":"sounds/sfx_hit1_C3_rev/sfx_hit1_C3_rev.yy",},"order":3,},
     {"id":{"name":"scr_player_ctrl","path":"scripts/scr_player_ctrl/scr_player_ctrl.yy",},"order":4,},
