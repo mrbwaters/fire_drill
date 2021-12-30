@@ -56,7 +56,6 @@
     {"id":{"name":"apply_gravity","path":"scripts/apply_gravity/apply_gravity.yy",},"order":1,},
     {"id":{"name":"sfx_hit1_C2_dry","path":"sounds/sfx_hit1_C2_dry/sfx_hit1_C2_dry.yy",},"order":0,},
     {"id":{"name":"Track2_Scary_Demo_0a","path":"sounds/Track2_Scary_Demo_0a/Track2_Scary_Demo_0a.yy",},"order":1,},
-    {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Main","path":"options/main/options_main.yy",},
