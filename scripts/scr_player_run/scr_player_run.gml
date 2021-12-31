@@ -20,8 +20,14 @@ function scr_player_run(){
 	prior_state = state;
 	
 	// Get horizontal speed for movement when on top of bounding box for obj_wall and when vspd == 0
-	// Add logic here 
-	hspd = v_run * horiz_input;
+		// Local variable for moving platform logic
+	moving_platform_id = instance_place(x,y+1, obj_platform_move);
+	platform_hspd = 0;
+	//Stay on moving platform - If on top bounding box of obj_platform_move then match hspd of target object
+	if (moving_platform_id) {
+		platform_hspd = variable_instance_get(moving_platform_id, "hspd");
+	} 
+	hspd = platform_hspd + v_run * horiz_input;
 	
 	// Transisitons
 	// If top of bounding box obj_wall and horiz_input == 0 Change state to Idle
