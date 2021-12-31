@@ -5,3 +5,7 @@ function scr_game_ctrl(){
 function fn_resume() {
 	room_goto(meta_game.next_room);
 }
+
+function fn_mute() {
+	meta_game.mute = !meta_game.mute;
+}

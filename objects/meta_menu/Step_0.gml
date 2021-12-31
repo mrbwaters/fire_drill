@@ -1,3 +1,7 @@
+if meta_game.mute then sound = "Unmute";
+else sound = "Mute";
+button_array[1, TEXT]	= sound;
+
 if meta_game.key_down_pressed {
 	highlight++;
 	// PLAY SOUND EFFECT
