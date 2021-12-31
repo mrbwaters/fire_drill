@@ -69,7 +69,7 @@ function scr_player_idle(){
 	}
 	
 	// Obj_ladder below and input is vspd is down then Change state to Climb make sure not colliding with the ground
-	if (place_meeting(x,y+1, obj_ladder) and vert_input > 0 and coords[?"dy"] == 0) {
+	if (place_meeting(x,y+3, obj_ladder) and vert_input > 0 and !place_meeting(x,y+1,obj_wall)) {
 		state = states.climb;
 	}
 	
