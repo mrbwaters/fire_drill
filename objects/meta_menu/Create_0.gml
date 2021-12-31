@@ -4,12 +4,12 @@ color			= c_white;
 highlight		= 0;
 
 init_buttonx	= 3 * grid_scale;
-init_buttony	= 4 * grid_scale;
+init_buttony	= 5 * grid_scale;
 
 TEXT	= 0;
 ACTION	= 1;
 
-if meta_game.game_begin = true then resume = "Begin the climb";
+if meta_game.game_begin == true then resume = "Begin the climb";
 else resume = "Resume";
 
 button_array[0, TEXT]	= resume;

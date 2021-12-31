@@ -45,6 +45,7 @@
     {"id":{"name":"sfx_hit1_C3_rev","path":"sounds/sfx_hit1_C3_rev/sfx_hit1_C3_rev.yy",},"order":3,},
     {"id":{"name":"scr_player_ctrl","path":"scripts/scr_player_ctrl/scr_player_ctrl.yy",},"order":4,},
     {"id":{"name":"rm_3","path":"rooms/rm_3/rm_3.yy",},"order":5,},
+    {"id":{"name":"spr_tower_bkgrnd","path":"sprites/spr_tower_bkgrnd/spr_tower_bkgrnd.yy",},"order":14,},
     {"id":{"name":"spr_highlight","path":"sprites/spr_highlight/spr_highlight.yy",},"order":1,},
     {"id":{"name":"scr_get_input","path":"scripts/scr_get_input/scr_get_input.yy",},"order":4,},
     {"id":{"name":"scr_print_debug","path":"scripts/scr_print_debug/scr_print_debug.yy",},"order":6,},
