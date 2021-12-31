@@ -29,8 +29,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Characters",
+    "path": "folders/Objects/Characters.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_pc",

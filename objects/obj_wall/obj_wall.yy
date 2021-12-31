@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Tower",
+    "path": "folders/Objects/Tower.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_wall",

@@ -51,6 +51,12 @@ function scr_player_run(){
 	if (instance_place(x, y, meta_damage)) {
 		state = states.death;
 	}
+	
+	// Walking off ladder or wall, change to fall.
+	if (!place_meeting(x,y+1, obj_ladder) and !place_meeting(x,y+1, obj_wall) and !place_meeting(x,y+1, obj_platform_move)) {
+		state = states.fall;
+	}
+	
 	// Enemy collision
 	// Wall squish
 }

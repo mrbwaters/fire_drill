@@ -22,6 +22,6 @@ function print_debug_console() {
 
 
 function player_death() {
-	x = x_start
-	y = y_start	
+	image_index = 1; //
+	instance_create_layer(0, 0, "Meta", meta_blackout); // Fade out and restart room.
 }

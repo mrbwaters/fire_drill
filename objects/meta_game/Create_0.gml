@@ -1,5 +1,5 @@
 //META
-first_room	= rm_1;
+first_room	= rm_4;
 testing		= false;
 
 //Physics Globals

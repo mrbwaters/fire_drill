@@ -18,7 +18,8 @@ function scr_player_jump(){
 		vspd += -jspd_max;
 		
 		// Change horizontal speed if user input is received for LEFT and RIGHT
-	
+		hspd = v_run * horiz_input;
+		
 		// Sound and animation
 		audio_play_sound(sfx_hit1_C2_dry,4,false);
 	}
