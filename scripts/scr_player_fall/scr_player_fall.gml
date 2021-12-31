@@ -14,7 +14,7 @@ function scr_player_fall(){
 
 	*/
 	// Always do prior_state checks before setting the prior_state
-	
+
 	// Save prior state
 	prior_state = state;
 	
@@ -23,8 +23,11 @@ function scr_player_fall(){
 	hspd = v_run * horiz_input;
 	
 	// Transition to states
-	// If on top of obj_wall and vspd is 0 then Change to idle
-	if (place_meeting(x,y + 1,obj_wall) or place_meeting(x,y + 1, obj_platform_move)) {
+	if (coords[?"vert_collide"] == true) {
+		state = states.idle;
+	}
+	
+	if (place_meeting(x,y + 1, obj_platform_move)) {
 		state = states.idle;
 	}
 	
