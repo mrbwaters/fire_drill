@@ -1,6 +1,7 @@
 //META
-first_room	= rm_1;
+first_room	= rm_menu;
 testing		= false;
+game_begin	= true;
 
 //Physics Globals
 t_scale = .75; //Global Time Scale
