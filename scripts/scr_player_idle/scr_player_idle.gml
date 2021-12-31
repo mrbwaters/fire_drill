@@ -27,6 +27,11 @@ function scr_player_idle(){
 		state = states.fall;
 	}
 	
+	// Wall squish to death
+	if (prior_state == states.idle and coords[?"vert_collide"] and coords[?"horiz_collide"]) {
+		state = states.death;
+	}
+	
 	// TODO Fall from idle or apply gravity in move function
 	//if (prior_state == states.idle and coords[?"dx"] == 0 and coords[?"dy"] == 0) {
 	//	state = states.fall;
@@ -40,11 +45,11 @@ function scr_player_idle(){
 	vspd = 0;
 	
 	// Local variable for moving platform logic
-	on_moving_platform = place_meeting(x,y + 1, obj_platform_move);
+	moving_platform_id = instance_place(x,y+1, obj_platform_move);
 	
 	//Stay on moving platform - If on top bounding box of obj_platform_move then match hspd of target object
-	if (on_moving_platform) {
-		hspd = obj_platform_move.hspd;  // TODO: Need platform object ID to get speed of platform.
+	if (moving_platform_id) {
+		hspd = variable_instance_get(moving_platform_id, "hspd");
 	} 
 
 	// Transisitons
@@ -56,7 +61,7 @@ function scr_player_idle(){
 	// Change state to Jump
 	if (jump_input != 0) {
 		// Reset hspd to 0 if on a moving platform and attempting to jump rather than carrying the momentum
-		if (on_moving_platform) hspd = 0;
+		if (moving_platform_id) hspd = 0;
 		
 	// Start the jump timer here
 		t_jump = current_time
@@ -80,6 +85,5 @@ function scr_player_idle(){
 	}
 	
 	// Change to death state
-	// Wall squish
 	// Enemy collision
 }
