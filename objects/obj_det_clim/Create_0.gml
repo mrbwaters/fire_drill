@@ -1,7 +1,7 @@
 event_inherited()
 
 name = "Determined Climber";
-color = $EE1C24; //Hex code for the color of the sprite
+color = c_red; //Hex code for the color of the sprite
 
 dialog[0] = "Hey, watch out! I'm practicing over here! Today's the day I reach the top of the tower, so I'm getting in one last warm up.";
 dialog[1] = "I'd suggest you do the same, but let's be honest: it takes a certain kind of person to get to the top, and you don't look like you're it.";

@@ -68,6 +68,10 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"dbd81ed0-5a67-454a-b12c-05d437b76222","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
+  "parent": {
+    "name": "Characters",
+    "path": "folders/Sprites/Characters.yy",
+  },
   "resourceVersion": "1.0",
   "name": "spr_weekwar",
   "tags": [],
