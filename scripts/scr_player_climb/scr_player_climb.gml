@@ -22,7 +22,6 @@ function scr_player_climb(){
 	
 	//Change to idle at top of ladder
 	if (coords[?"dy"] == 0 and vspd < 0 and prior_state = states.climb and !place_meeting(x,y, obj_ladder)) {
-		vspd = 0;
 		state = states.idle;
 	}
 	

@@ -11,17 +11,22 @@ function scr_player_jump(){
 		Meta Actions - for simpler gameplay, idle might be the only state we want to be in to do other actions (except for Pause)
 			Pause
 	*/
+	// Change horizontal speed if user input is received for LEFT and RIGHT
+	hspd = v_run * horiz_input
+	
 	// Always do prior_state checks before setting the prior_state
 	
 	// Apply values to key movement variables make sure not to double jump
 	if (prior_state != states.jump) {
 		vspd += -jspd_max;
 		
-		// Change horizontal speed if user input is received for LEFT and RIGHT
-		hspd = v_run * horiz_input;
-		
 		// Sound and animation
 		audio_play_sound(sfx_hit1_C2_dry,4,false);
+	}
+    
+	// Fall after colliding with a wall during a jump
+    if (prior_state == states.jump and coords[?"vert_collide"] == true) {
+		state = states.fall;
 	}
 
 	// Save prior state after the prior state check

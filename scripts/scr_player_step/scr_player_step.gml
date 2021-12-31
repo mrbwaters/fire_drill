@@ -7,13 +7,12 @@ function scr_player_step(){
 	// Enter the state machine
 	apply_player_state();
 	
-	/* Apply the input and variables set by the given state function
-	   scr_apply_movement()
-	      move()
-	      collide()
-	      ??apply_gravity() not sure when where to do this yet??
-	*/
-	coords = move_collide_and_grav();
+	// Check collisions and store results
+	get_collision(obj_wall, coords);
+
+	// Apply the movement
+	x=coords[?"x_new"];
+	y=coords[?"y_new"]
 
 	// Print Debug Messages
 	print_debug_step();
