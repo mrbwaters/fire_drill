@@ -3,6 +3,8 @@ first_room	= rm_menu;
 testing		= false;
 game_begin	= true;
 
+next_room = rm_1; // Use to start/resume action
+
 //Physics Globals
 t_scale = .75; //Global Time Scale
 grid_scale = 16; //Global Grid Scale

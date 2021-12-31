@@ -3,5 +3,5 @@ function scr_game_ctrl(){
 }
 
 function fn_resume() {
-	show_debug_message("GAME SHOULD RESUME");
+	room_goto(meta_game.next_room);
 }
