@@ -27,7 +27,7 @@ function scr_player_run(){
 	if (moving_platform_id) {
 		platform_hspd = variable_instance_get(moving_platform_id, "hspd");
 	} 
-	hspd = v_run * horiz_input;
+	hspd = platform_hspd + v_run * horiz_input;
 	
 	// Transisitons
 	// If top of bounding box obj_wall and horiz_input == 0 Change state to Idle
