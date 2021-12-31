@@ -27,6 +27,11 @@ function scr_player_idle(){
 		state = states.fall;
 	}
 	
+	// Wall squish to death
+	if (prior_state == states.idle and coords[?"vert_collide"] and coords[?"horiz_collide"]) {
+		state = states.death;
+	}
+	
 	// TODO Fall from idle or apply gravity in move function
 	//if (prior_state == states.idle and coords[?"dx"] == 0 and coords[?"dy"] == 0) {
 	//	state = states.fall;
@@ -80,6 +85,5 @@ function scr_player_idle(){
 	}
 	
 	// Change to death state
-	// Wall squish
 	// Enemy collision
 }
