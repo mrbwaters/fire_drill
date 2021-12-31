@@ -1,7 +1,7 @@
 /// @description Special global keys
 scr_get_input();
 
-if key_menu && room != rm_menu {
+if (key_menu || key_start) && room != rm_menu {
 	next_room = room;
 	room_persistent = true;
 	room_goto(rm_menu);

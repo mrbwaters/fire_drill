@@ -10,4 +10,4 @@ if meta_game.key_up_pressed {
 }
 if highlight < 0 then highlight = array_length(button_array) - 1;
 
-if meta_game.key_action then script_execute(button_array[highlight, ACTION]);
+if meta_game.key_action || meta_game.key_start then script_execute(button_array[highlight, ACTION]);
