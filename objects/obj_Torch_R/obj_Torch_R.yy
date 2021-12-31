@@ -1,10 +1,16 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_Torch_R",
+    "path": "sprites/spr_Torch_R/spr_Torch_R.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "meta_prop",
+    "path": "objects/meta_prop/meta_prop.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -21,11 +27,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Meta",
-    "path": "folders/Objects/Meta.yy",
+    "name": "Props",
+    "path": "folders/Objects/Props.yy",
   },
   "resourceVersion": "1.0",
-  "name": "meta_prop",
+  "name": "obj_Torch_R",
   "tags": [],
   "resourceType": "GMObject",
 }
