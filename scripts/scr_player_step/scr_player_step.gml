@@ -8,7 +8,7 @@ function scr_player_step(){
 	apply_player_state();
 	
 	// Check collisions and store results
-	get_collision(obj_wall, coords);
+	get_collision(meta_collision, coords);
 
 	// Apply the movement
 	x=coords[?"x_new"];

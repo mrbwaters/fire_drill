@@ -9,7 +9,7 @@ vspd = 0;
 // Collision variables
 // Create Map to store results of collision check
 coords = ds_map_create();
-get_collision(obj_wall, coords);
+get_collision(meta_collision, coords);
 
 // Player states
 enum states {
