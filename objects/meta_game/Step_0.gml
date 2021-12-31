@@ -10,4 +10,4 @@ if key_menu && room != rm_menu {
 if key_test then testing = !testing;
 if key_restart then game_restart();
 
-if room = rm_1 then game_begin = false; // Hacky way of telling whether we're in opening menu or pause menu.
+if room == rm_1 then game_begin = false; // Hacky way of telling whether we're in opening menu or pause menu.
