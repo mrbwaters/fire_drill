@@ -11,7 +11,7 @@ function scr_player_idle(){
 	Transition to states
 		Run - can run from idle state after user input is supplied
 		Jump - can jump from idle state after user input is supplied
-		Climb - can climb from idle state after a collision with ladder is made
+		Climb - can climb from idle state after a collision with ladder is made (either lader intesecting or lader below)
 		Fall - this is triggered when you get pushed off a moving object and the player did not jump in time
 	    Death - a pc should enter death state if squished into a wall by moving platform or collision left or right with enemy
 		Meta Actions - for simpler gameplay, idle might be the only state we want to be in to do other actions (except for Pause)
@@ -58,7 +58,7 @@ function scr_player_idle(){
 		// Reset hspd to 0 if on a moving platform and attempting to jump rather than carrying the momentum
 		if (on_moving_platform) hspd = 0;
 		
-		// Start the jump timer here
+	// Start the jump timer here
 		t_jump = current_time
 		state = states.jump;	
 	}
@@ -71,6 +71,12 @@ function scr_player_idle(){
 	// Obj_ladder below and input is vspd is down then Change state to Climb make sure not colliding with the ground
 	if (place_meeting(x,y+1, obj_ladder) and vert_input > 0 and coords[?"dy"] == 0) {
 		state = states.climb;
+	}
+	
+	
+	// Walking off ladder or wall, change to fall.
+	if (!place_meeting(x,y+1, obj_ladder) and !place_meeting(x,y+1, obj_wall) and !place_meeting(x,y+1, obj_platform_move)) {
+		state = states.fall;
 	}
 	
 	// Change to death state
