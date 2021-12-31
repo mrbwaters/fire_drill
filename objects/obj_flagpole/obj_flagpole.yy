@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_dust",
-    "path": "sprites/spr_dust/spr_dust.yy",
+    "name": "spr_flag_pole",
+    "path": "sprites/spr_flag_pole/spr_flag_pole.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,16 +22,17 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_pc","path":"objects/obj_pc/obj_pc.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "VFX",
-    "path": "folders/Objects/VFX.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_dust",
+  "name": "obj_flagpole",
   "tags": [],
   "resourceType": "GMObject",
 }

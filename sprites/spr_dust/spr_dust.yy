@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "VFX",
+    "path": "folders/Sprites/VFX.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_dust",
