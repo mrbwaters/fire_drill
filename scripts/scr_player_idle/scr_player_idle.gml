@@ -44,8 +44,8 @@ function scr_player_idle(){
 	
 	//Stay on moving platform - If on top bounding box of obj_platform_move then match hspd of target object
 	if (on_moving_platform) {
-		hspd = obj_platform_move.hspd;
-	}
+		hspd = obj_platform_move.hspd;  // TODO: Need platform object ID to get speed of platform.
+	} 
 
 	// Transisitons
 	// On top bounding box of obj_wall (logic for on_ground) then change state to Run
