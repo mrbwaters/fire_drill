@@ -1,6 +1,13 @@
 //META
-first_room	= rm_1;
 testing		= false;
+
+// Room logic
+game_begin	= true;
+next_room = rm_1; // Use to start/resume action
+first_room	= rm_menu;
+
+//Audio logic
+mute = false;
 
 //Physics Globals
 t_scale = .75; //Global Time Scale
