@@ -1,6 +1,6 @@
 {
   "resources": [
-    {"id":{"name":"par_npc","path":"objects/par_npc/par_npc.yy",},"order":2,},
+    {"id":{"name":"meta_npc","path":"objects/meta_npc/meta_npc.yy",},"order":2,},
     {"id":{"name":"meta_game","path":"objects/meta_game/meta_game.yy",},"order":0,},
     {"id":{"name":"spr_stone_floor1","path":"sprites/spr_stone_floor1/spr_stone_floor1.yy",},"order":2,},
     {"id":{"name":"meta_transition","path":"objects/meta_transition/meta_transition.yy",},"order":3,},

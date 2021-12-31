@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "par_npc",
-    "path": "objects/par_npc/par_npc.yy",
+    "name": "meta_npc",
+    "path": "objects/meta_npc/meta_npc.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
