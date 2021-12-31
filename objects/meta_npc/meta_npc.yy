@@ -29,7 +29,7 @@
     "path": "folders/Objects/Characters.yy",
   },
   "resourceVersion": "1.0",
-  "name": "par_npc",
+  "name": "meta_npc",
   "tags": [],
   "resourceType": "GMObject",
 }
