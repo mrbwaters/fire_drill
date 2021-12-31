@@ -23,10 +23,12 @@ function scr_player_fall(){
 	hspd = v_run * horiz_input;
 	
 	// Transition to states
-	if (coords[?"vert_collide"] == true) {
+	// Return to idle after a fall
+	if (coords[?"vert_collide"] == true and coords[?"dy"] > 0) {
 		state = states.idle;
 	}
 	
+	// Return to idle after a fall onto a moving platform
 	if (place_meeting(x,y + 1, obj_platform_move)) {
 		state = states.idle;
 	}
