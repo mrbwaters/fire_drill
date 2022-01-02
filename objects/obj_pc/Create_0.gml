@@ -35,5 +35,3 @@ v_fallmax	= 2/20;	// max fall velocity
 v_climb		= 1/20;	// climbing velocity
 v_run		= 1/20;	// running velocity
 a_grav		= 0.000075; // gravity acceleration
-
-

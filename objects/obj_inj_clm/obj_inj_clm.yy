@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_wk_war",
-    "path": "sprites/spr_wk_war/spr_wk_war.yy",
+    "name": "spr_inj_clm",
+    "path": "sprites/spr_inj_clm/spr_inj_clm.yy",
   },
   "solid": false,
   "visible": true,
@@ -33,7 +33,7 @@
     "path": "folders/Objects/Characters.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_wk_war",
+  "name": "obj_inj_clm",
   "tags": [],
   "resourceType": "GMObject",
 }
