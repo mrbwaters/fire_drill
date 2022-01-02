@@ -2,8 +2,8 @@ if distance_to_object(obj_pc) >= (meta_game.grid_scale / 2) {
 	talking = false;
 	if PAGE != 0 then PAGE = 0;
 } else {
-	meta_game.tip = "Press " + meta_game.name_key_action + " to talk to " + name;
-	meta_game.show_tip = true;
+	//meta_game.tip = "Press " + meta_game.name_key_action + " to talk to " + name;
+	//meta_game.show_tip = true;
 	
 	if meta_game.key_action {
 		if talking = false then talking = true;
