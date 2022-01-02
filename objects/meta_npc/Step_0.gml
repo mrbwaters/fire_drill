@@ -1,13 +1,14 @@
 if distance_to_object(obj_pc) >= 10 {
 	talking = false;
-	if page != 0 then page = 0;
+	if PAGE != 0 then PAGE = 0;
 } else if meta_game.key_action {
 	if talking = false then talking = true;
 	else {
-		if page < (array_length(dialog) - 1) then page++;
+		if PAGE < (array_length(dialog[CONVERSATION]) - 1) then PAGE++;
 		else {
 			talking = false;
-			page = 0;
+			PAGE = 0;
+			if CONVERSATION < (array_length(dialog) - 1) then CONVERSATION++;
 		}	
 	}
 }

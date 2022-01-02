@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_det_clim",
-    "path": "sprites/spr_det_clim/spr_det_clim.yy",
+    "name": "spr_twr_astc",
+    "path": "sprites/spr_twr_astc/spr_twr_astc.yy",
   },
   "solid": false,
   "visible": true,
@@ -33,7 +33,7 @@
     "path": "folders/Objects/Characters.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_det_clim",
+  "name": "obj_twr_astc",
   "tags": [],
   "resourceType": "GMObject",
 }

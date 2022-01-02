@@ -10,5 +10,5 @@ if talking {
 	draw_set_halign(fa_left);
 	draw_sprite(spr_textbox, 0, tboxx, tboxy);
 	draw_text_transformed(tboxx + 2, tboxy + 2, name, 0.25, 0.25, 0);
-	draw_text_ext_transformed(tboxx + 2, tboxy + 2 + lspace + 1, dialog[page], lspace * 4 + 1, (sprite_get_width(spr_textbox) - 4) * 4, 0.25, 0.25, 0);
+	draw_text_ext_transformed(tboxx + 2, tboxy + 2 + lspace + 1, dialog[CONVERSATION, PAGE], lspace * 4 + 1, (sprite_get_width(spr_textbox) - 4) * 4, 0.25, 0.25, 0);
 }

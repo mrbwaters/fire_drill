@@ -33,7 +33,7 @@
     "path": "folders/Objects/Characters.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_wk_war",
+  "name": "obj_inj_clm",
   "tags": [],
   "resourceType": "GMObject",
 }
