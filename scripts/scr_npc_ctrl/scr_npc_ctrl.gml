@@ -9,6 +9,15 @@ if distance_to_object(obj_pc) >= (meta_game.grid_scale / 2) {
 	//meta_game.show_tip = true;
 	
 	if meta_game.key_action {
+		
+		switch object_index {
+			case obj_det_clm: vox_play("npc_det_clm"); break;
+			case obj_inj_clm: vox_play("npc_inj_clm"); break;
+			case obj_twr_astc: vox_play("npc_twr_astc"); break;
+			case obj_wk_war: vox_play("npc_wk_war"); break;
+		}
+		
+		
 		if talking = false then talking = true;
 		else {
 			if PAGE < (array_length(dialog[CONVERSATION]) - 1) then PAGE++;
