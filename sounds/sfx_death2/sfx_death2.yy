@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.7,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "Track4_Adventure_Demo_0a.mp3",
-  "duration": 67.29143,
+  "soundFile": "sfx_death2.mp3",
+  "duration": 4.336327,
   "parent": {
-    "name": "BGM",
-    "path": "folders/Sounds/BGM.yy",
+    "name": "SFX",
+    "path": "folders/Sounds/SFX.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Track4_Adventure_Demo_0a",
+  "name": "sfx_death2",
   "tags": [],
   "resourceType": "GMSound",
 }

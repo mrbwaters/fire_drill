@@ -11,5 +11,7 @@ function scr_player_death(){
 	
 	// Carry out death actions here
 	sprite_index = spr_pc_death;
+	
 	player_death();
+	state="Idle"
 }
