@@ -8,5 +8,4 @@ function fn_resume() {
 
 function fn_mute() {
 	meta_game.mute = !meta_game.mute;
-	
 }
