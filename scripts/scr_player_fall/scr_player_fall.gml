@@ -26,11 +26,13 @@ function scr_player_fall(){
 	// Return to idle after a fall
 	if (coords[?"vert_collide"] == true and coords[?"dy"] > 0) {
 		state = states.idle;
+		sfx_play("Land");
 	}
 	
 	// Return to idle after a fall onto a moving platform
 	if (place_meeting(x,y + 1, obj_platform_move)) {
 		state = states.idle;
+		sfx_play("Land")
 	}
 	
 	// If collide with ladder and key pressed is UP Change to Climb

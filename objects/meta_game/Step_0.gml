@@ -12,4 +12,12 @@ if key_restart then game_restart();
 
 if room == rm_1 then game_begin = false; // Hacky way of telling whether we're in opening menu or pause menu.
 
-if mute then audio_stop_all();
+if mute {
+	audio_sound_gain(global._bgm,.0,.1)
+	_sfx_gain = 0;
+}
+
+if !mute {
+	audio_sound_gain(global._bgm,.05,.1)
+	_sfx_gain = 0.05;
+}

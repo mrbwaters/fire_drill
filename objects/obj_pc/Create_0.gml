@@ -26,6 +26,7 @@ state		= states.idle;
 prior_state =  state;
 player_init = false;
 init_room	= "null";
+_sfx_gain = 0.05;
 
 // Movement coefficients
 jspd_max	= 1/10;

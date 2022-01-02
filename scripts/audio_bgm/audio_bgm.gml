@@ -34,3 +34,15 @@ switch (mood) {
 function bgm_stop() {
 	audio_stop_sound(global._bgm);
 }
+
+function sfx_play(_event){
+	_sfx_index = sfx_hit1_C2_dry
+switch(_event) {
+	case "Jump": var _sfx_index = sfx_hit1_C2_dry; break;
+	case "Land": var _sfx_index = sfx_thud1_C2_dry; break;	
+	case "Tap": var  _sfx_index = sfx_thud2_C2_dry; break;
+	}
+	
+var _sfx = audio_play_sound(_sfx_index,4,false);
+audio_sound_gain(_sfx,_sfx_gain,0.05);		
+}
