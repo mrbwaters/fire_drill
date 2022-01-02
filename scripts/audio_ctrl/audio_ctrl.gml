@@ -39,10 +39,10 @@ function bgm_stop() {
 }
 
 function sfx_play(_event){
-	_sfx_index = sfx_hit1_C2_dry
+	_sfx_index = sfx_hit1_C2_dry;
 	
 switch(_event) {
-	case "Jump":	var _sfx_index	= sfx_pc_jumping_1;	break;
+	case "Jump":	var _sfx_index	= sfx_hit1_C2_dry;	break;
 	case "Land":	var _sfx_index	= sfx_thud1_C2_dry; break;	
 	case "Tap":		var  _sfx_index = sfx_thud2_C2_dry; break;
 	case "Death":	var _sfx_index	= sfx_death2;		break;
