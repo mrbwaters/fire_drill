@@ -15,7 +15,7 @@ t_scale = .75; //Global Time Scale
 grid_scale = 16; //Global Grid Scale
 
 //PC Globals
-pcx = grid_scale * 4;
+pcx = grid_scale * 6;
 pcy = grid_scale * 12;
 
 
