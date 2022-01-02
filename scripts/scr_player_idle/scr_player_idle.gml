@@ -84,6 +84,7 @@ function scr_player_idle(){
 		state = states.fall;
 	}
 	
+	
 	// Change to death state
 	// Enemy collision
 }

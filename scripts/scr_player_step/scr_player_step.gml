@@ -3,7 +3,9 @@
 function scr_player_step(){
 	// Handle User Input
 	scr_get_input();
-
+	if horiz_input>0 facing = "Right";
+	if horiz_input<0 facing = "Left";
+	
 	// Enter the state machine
 	apply_player_state();
 	

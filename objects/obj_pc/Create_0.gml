@@ -5,6 +5,7 @@ y = meta_game.pcy;
 // Movement Variables
 hspd = 0;
 vspd = 0;
+facing = 0;
 
 // Collision variables
 // Create Map to store results of collision check

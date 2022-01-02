@@ -16,6 +16,7 @@ function scr_player_run(){
 	*/
 	// Always do prior_state checks before setting the prior_state
 	sprite_index = spr_pc;
+	apply_facing();
 	// Save prior state
 	prior_state = state;
 	
@@ -63,6 +64,7 @@ function scr_player_run(){
 		state = states.fall;
 	}
 	
+
 	// Enemy collision
 	// Wall squish
 }

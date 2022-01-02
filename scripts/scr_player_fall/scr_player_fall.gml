@@ -16,7 +16,8 @@ function scr_player_fall(){
 	// Always do prior_state checks before setting the prior_state
 
 	sprite_index = spr_pc;
-
+	apply_facing();
+	
 	// Save prior state
 	prior_state = state;
 	
