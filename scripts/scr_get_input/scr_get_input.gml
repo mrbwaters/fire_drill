@@ -37,8 +37,11 @@ function scr_get_input() {
 		key_start			= gamepad_button_check_pressed(_dev, gp_start) or key_start;
 	}
 	
+	// Name keys for display in tooltips
+	name_key_action	= "E";
+	
 	//Convert Input into variables used for movement
 	horiz_input = key_right - key_left;
-	vert_input = key_down-key_up;
-	jump_input = key_jump;
+	vert_input	= key_down-key_up;
+	jump_input	= key_jump;
 }
