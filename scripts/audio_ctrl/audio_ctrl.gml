@@ -40,16 +40,37 @@ function bgm_stop() {
 
 function sfx_play(_event){
 	_sfx_index = sfx_hit1_C2_dry
+	
 switch(_event) {
 	case "Jump": var _sfx_index = sfx_hit1_C2_dry; break;
 	case "Land": var _sfx_index = sfx_thud1_C2_dry; break;	
 	case "Tap": var  _sfx_index = sfx_thud2_C2_dry; break;
 	case "Death": var _sfx_index = sfx_death2; break;
+	
+	// Menu SFX
 	case "Menu_Select": var _sfx_index =sfx_tap; break;
 	case "Menu_Move": var _sfx_index =sfx_tap2; break;
 	}
 	
 var _sfx = audio_play_sound(_sfx_index,4,false);
 audio_sound_gain(_sfx,meta_game._sfx_gain,0.06);	
+}
 
+
+function vox_play(_event) {
+	if variable_global_exists("_vox") {
+		audio_stop_sound(global._vox)
+	}
+var _vox_index = sfx_hit1_C2_dry
+	
+switch(_event) {
+		//// NPC VOX - UPDATE THESE MATT
+	case "npc_wk_war": var _vox_index = sfx_death; break;
+	case "npc_det_clm": var _vox_index = sfx_death; break;
+	case "npc_inj_clm": var _vox_index = sfx_death; break;
+	case "npc_twr_astc": var _vox_index = sfx_death; break;
+}
+
+global._vox = audio_play_sound(_vox_index,4,false);
+audio_sound_gain(global._vox,meta_game._sfx_gain,0.06);	
 }
