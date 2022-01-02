@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Doodads",
+    "path": "folders/Sprites/Doodads.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_door",

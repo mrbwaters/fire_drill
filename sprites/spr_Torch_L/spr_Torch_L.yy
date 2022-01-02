@@ -91,8 +91,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Props",
-    "path": "folders/Sprites/Props.yy",
+    "name": "Doodads",
+    "path": "folders/Sprites/Doodads.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Torch_L",
