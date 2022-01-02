@@ -1,4 +1,4 @@
-if distance_to_object(obj_pc) >= 10 {
+if distance_to_object(obj_pc) >= (meta_game.grid_scale / 2) {
 	talking = false;
 	if PAGE != 0 then PAGE = 0;
 } else if meta_game.key_action {
