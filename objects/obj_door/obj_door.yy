@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Tower",
-    "path": "folders/Objects/Tower.yy",
+    "name": "Props",
+    "path": "folders/Objects/Props.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_door",

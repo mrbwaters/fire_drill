@@ -1,11 +1,13 @@
 event_inherited()
 
-name = "Weekend Warrior";
-color = $959595; //Hex code for the color of the sprite
+name	= "Injured Climber";
+color	= $78B83C; //Hex code for the color of the sprite
 
-dialog[0, 0] = "Howdy, stranger. Don't mind me. I'm just getting in a little exercise. Helps keep me young and fit! Hah!";
-dialog[0, 1] = "Ah, I know that look. You've got that look that says, \"I'm getting to the top and ain't no one stopping me!\"";
-dialog[0, 2] = "Time was, I had that look myself. Heh. Take it from an old timer: there's more to life than testing yourself and chasing glory.";
-dialog[0, 3] = "Ah, but enough of my rambling. You do what you've got to do. Good luck to you, stranger!";
+dialog[0, 0] = "Son of a gun! I was standing on a platform up above, and one of those little metallic jerks knocked me down! Stupid things... Grumble grumble...";
 
-dialog[1, 0] = "THIS IS A TEST OF SEPARATE CONVESATIONS.";
+dialog[1, 0] = "Ah, jeez... is that broken, or just sprained? I can probably get down if it's just a sprain, but if it's broken…";
+
+dialog[2, 0] = "I'm... I'm just going to rest a little. Just gonna catch my breath a minute and then I'll be right as rain...";
+
+dialog[3, 0] = "Okay! Here we go! One, two, thre– OUCH!";
+dialog[3, 1] = "...maybe I need another minute.";

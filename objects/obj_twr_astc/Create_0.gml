@@ -1,7 +1,7 @@
 event_inherited()
 
 name = "Tower Ascetic";
-color = $FDC689; //Hex code for the color of the sprite
+color = $89C6FD; //Hex code for the color of the sprite
 
 dialog[0, 0] = "...";
 
