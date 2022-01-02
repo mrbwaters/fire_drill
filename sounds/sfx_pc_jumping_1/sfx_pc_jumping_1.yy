@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sfx_pc_jumping_1.mp3",
-  "duration": 1.906939,
+  "duration": 0.522449,
   "parent": {
     "name": "VOX",
     "path": "folders/Sounds/VOX.yy",
