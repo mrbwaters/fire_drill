@@ -9,5 +9,5 @@ if show_tip {
 	draw_set_color(c_white);
 	draw_set_halign(fa_left);
 	draw_sprite(spr_tip, 0, tboxx, tboxy);
-	draw_text_transformed(tboxx + 2, tboxy + 2, tip, 0.25, 0.25, 0);
+	draw_text_transformed(tboxx + 2, tboxy + (sprite_get_height(spr_tip)) / 3, tip, 0.25, 0.25, 0);
 }
