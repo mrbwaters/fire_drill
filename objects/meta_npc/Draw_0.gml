@@ -2,7 +2,7 @@ draw_self();
 if talking {
 	// Take min/max so that textbox does not go off the screen
 	var tboxx	= min(x - (meta_game.grid_scale / 2), room_width - sprite_get_width(spr_textbox));
-	var tboxy	= max(0, y - (sprite_get_height(spr_textbox)) - (meta_game.grid_scale / 2));
+	var tboxy	= max(0, y - (sprite_get_height(sprite_index)) - (sprite_get_height(spr_textbox)) - (meta_game.grid_scale / 2));
 	var lspace	= (string_height(name) * 0.25);
 	
 	draw_set_font(fnt_dialog);
