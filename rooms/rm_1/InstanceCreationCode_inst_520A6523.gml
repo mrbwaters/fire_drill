@@ -1,1 +1,1 @@
-grid_x_move = -5;
+grid_x_move = 3;
