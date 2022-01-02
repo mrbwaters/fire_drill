@@ -81,6 +81,7 @@
     {"id":{"name":"Stonepodt1","path":"sprites/Stonepodt1/Stonepodt1.yy",},"order":0,},
     {"id":{"name":"rm_tower_template","path":"rooms/rm_tower_template/rm_tower_template.yy",},"order":4,},
     {"id":{"name":"move_only","path":"scripts/move_only/move_only.yy",},"order":3,},
+    {"id":{"name":"scr_npc_ctrl","path":"scripts/scr_npc_ctrl/scr_npc_ctrl.yy",},"order":1,},
     {"id":{"name":"spr_stone_ladder1","path":"sprites/spr_stone_ladder1/spr_stone_ladder1.yy",},"order":2,},
     {"id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},"order":1,},
     {"id":{"name":"apply_gravity","path":"scripts/apply_gravity/apply_gravity.yy",},"order":1,},

@@ -14,6 +14,15 @@ function scr_player_step(){
 	x=coords[?"x_new"];
 	y=coords[?"y_new"]
 
+	// Check distance to npcs
+	if distance_to_object(meta_npc) < (meta_game.grid_scale / 2) {
+		var target = instance_nearest(x, y, meta_npc);
+			meta_game.tip = "Press " + meta_game.name_key_action + " to talk to " + target.name;
+			meta_game.show_tip = true;
+		if target.talking then meta_game.show_tip = false;
+	} else meta_game.show_tip = false;
+
+
 	// Print Debug Messages
 	print_debug_step();
 
