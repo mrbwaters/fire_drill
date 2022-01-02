@@ -15,6 +15,8 @@ function scr_player_climb(){
 	*/
 	// Always do prior_state checks before setting the prior_state
 	
+	sprite_index = spr_pc_climb;
+	
 	//Change to idle at bottom of ladder
 	if (coords[?"dy"] != 0 and vspd > 0 and prior_state = states.climb) {
 		state = states.idle;

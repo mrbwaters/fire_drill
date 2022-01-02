@@ -8,6 +8,7 @@ first_room	= rm_menu;
 
 //Audio logic
 mute = false;
+bgm_play();
 
 //Physics Globals
 t_scale = .75; //Global Time Scale
@@ -17,11 +18,9 @@ grid_scale = 16; //Global Grid Scale
 pcx = 16;
 pcy = 208;
 
+
 // Turn off texture interpolation
 gpu_set_texfilter(false);
-
-// Start Background Music
-bgm_play(2);
 
 // Tool tips
 show_tip	= false;

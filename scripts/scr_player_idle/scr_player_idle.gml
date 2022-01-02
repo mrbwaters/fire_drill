@@ -21,7 +21,7 @@ function scr_player_idle(){
 			Pause - any state should be able to trigger the Pause state
 	*/
 	// Always do prior_state checks before setting the prior_state
-	
+	sprite_index = spr_pc;
 	// Get pushed off moving object Last state is idle and vspd > 0 Change state to Fall
 	if (prior_state == states.idle and vspd > 0 and coords[?"dy"] != 0) {
 		state = states.fall;
