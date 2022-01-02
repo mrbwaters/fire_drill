@@ -6,3 +6,4 @@ if (room != init_room) {
 	y_start = obj_pc.y;
 	init_room=room;
 }
+

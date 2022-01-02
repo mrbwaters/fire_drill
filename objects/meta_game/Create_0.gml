@@ -22,5 +22,9 @@ pcy = 208;
 // Turn off texture interpolation
 gpu_set_texfilter(false);
 
+// Tool tips
+show_tip	= false;
+tip			= "TIP NOT ASSIGNED";
+
 //Move to first room
 room_goto(first_room);
