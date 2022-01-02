@@ -51,6 +51,7 @@
     {"id":{"name":"spr_textbox","path":"sprites/spr_textbox/spr_textbox.yy",},"order":7,},
     {"id":{"name":"scr_player_death","path":"scripts/scr_player_death/scr_player_death.yy",},"order":7,},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},"order":7,},
+    {"id":{"name":"spr_stone_platform","path":"sprites/spr_stone_platform/spr_stone_platform.yy",},"order":3,},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":0,},
     {"id":{"name":"sfx_hit1_C3_rev","path":"sounds/sfx_hit1_C3_rev/sfx_hit1_C3_rev.yy",},"order":3,},
     {"id":{"name":"spr_pc_R","path":"sprites/spr_pc_R/spr_pc_R.yy",},"order":9,},

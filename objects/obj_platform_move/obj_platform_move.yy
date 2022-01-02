@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_stone_floor1",
-    "path": "sprites/spr_stone_floor1/spr_stone_floor1.yy",
+    "name": "spr_stone_platform",
+    "path": "sprites/spr_stone_platform/spr_stone_platform.yy",
   },
   "solid": false,
   "visible": true,
