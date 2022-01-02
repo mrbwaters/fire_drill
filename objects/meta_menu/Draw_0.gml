@@ -5,7 +5,7 @@ draw_set_font(fnt_menu);
 draw_set_color(color);
 draw_set_halign(fa_center);
 
-if meta_game.game_begin == true then draw_sprite(spr_tower_bkgrnd, 0, 0, 0);
+if meta_game.game_begin == true then draw_sprite(spr_dt_pixel_ds, 0, 0, 0);
 
 for (var i = 0; i < array_length(button_array); i++) {
 	draw_sprite(spr_button, 0, buttonx, buttony + (i * 2 * grid_scale));
