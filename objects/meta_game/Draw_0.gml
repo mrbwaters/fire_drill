@@ -1,7 +1,7 @@
 if show_tip {
-	// Take min/max so that textbox does not go off the screen
+	if !instance_exists(obj_pc) then exit; // Don't run in menus or other rooms
 	
-	if !instance_exists(obj_pc) then exit;
+	// Take min/max so that textbox does not go off the screen
 	var tboxx	= min(obj_pc.x - (grid_scale / 2), room_width - sprite_get_width(spr_tip));
 	var tboxy	= max(0, obj_pc.y - (sprite_get_height(spr_tip)) - (meta_game.grid_scale / 2));
 	
