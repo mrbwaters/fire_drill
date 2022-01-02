@@ -12,8 +12,6 @@ function scr_player_jump(){
 			Pause
 	*/
 	
-	sprite_index = spr_pc_jump;
-	
 	// Change horizontal speed if user input is received for LEFT and RIGHT
 	hspd = v_run * horiz_input
 	
@@ -24,7 +22,8 @@ function scr_player_jump(){
 		vspd += -jspd_max;
 		
 		// Sound and animation
-		sfx_play("Thud")
+		sfx_play("Jump");
+		sprite_index = spr_pc_jump;
 		
 		
 	}
@@ -32,7 +31,7 @@ function scr_player_jump(){
 	// Fall after colliding with a wall during a jump
     if (prior_state == states.jump and coords[?"vert_collide"] == true) {
 		state = states.fall;
-		sfx_play("Land")
+		sfx_play("Land");
 	}
 
 	// Save prior state after the prior state check
