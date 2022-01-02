@@ -2,9 +2,9 @@
 testing		= false;
 
 // Room logic
-game_begin	= true;
-next_room = rm_1; // Use to start/resume action
 first_room	= rm_menu;
+game_begin	= true;
+next_room	= rm_1; // Use to start/resume action
 
 //Audio logic
 mute = false;
@@ -16,7 +16,7 @@ grid_scale = 16; //Global Grid Scale
 
 //PC Globals
 pcx = grid_scale * 6;
-pcy = grid_scale * 12;
+pcy = grid_scale * 13;
 
 
 // Turn off texture interpolation

@@ -27,6 +27,6 @@ if mute {
 }
 
 if !mute {
-	audio_sound_gain(global._bgm,.05,.1)
-	_sfx_gain = 0.05;
+	audio_sound_gain(global._bgm,.03,.1)
+	_sfx_gain = 0.06;
 }

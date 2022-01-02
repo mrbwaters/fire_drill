@@ -22,8 +22,11 @@ function print_debug_console() {
 
 
 function player_death() {
-	image_index = 1; //
+
+	sprite_index = spr_pc_death; //
 	instance_create_layer(0, 0, "Meta", meta_blackout); // Fade out and restart room.
+	sfx_play("Death");
+	bgm_stop();
 }
 
 function apply_facing() {
