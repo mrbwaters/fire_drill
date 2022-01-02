@@ -44,5 +44,6 @@ switch(_event) {
 	}
 	
 var _sfx = audio_play_sound(_sfx_index,4,false);
-audio_sound_gain(_sfx,_sfx_gain,0.05);		
+audio_sound_gain(_sfx,meta_game._sfx_gain,0.05);		
+
 }

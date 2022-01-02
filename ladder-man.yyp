@@ -8,7 +8,7 @@
     {"id":{"name":"spr_Web","path":"sprites/spr_Web/spr_Web.yy",},"order":2,},
     {"id":{"name":"sfx_hit1_C3_dry","path":"sounds/sfx_hit1_C3_dry/sfx_hit1_C3_dry.yy",},"order":2,},
     {"id":{"name":"obj_spike","path":"objects/obj_spike/obj_spike.yy",},"order":10,},
-    {"id":{"name":"audio_bgm","path":"scripts/audio_bgm/audio_bgm.yy",},"order":2,},
+    {"id":{"name":"audio_ctrl","path":"scripts/audio_ctrl/audio_ctrl.yy",},"order":2,},
     {"id":{"name":"spr_dt_pixel_ds","path":"sprites/spr_dt_pixel_ds/spr_dt_pixel_ds.yy",},"order":3,},
     {"id":{"name":"spr_button","path":"sprites/spr_button/spr_button.yy",},"order":0,},
     {"id":{"name":"obj_dust","path":"objects/obj_dust/obj_dust.yy",},"order":0,},
