@@ -1,2 +1,2 @@
-destination = rm_4;
+destination = noone;
 top_of_room = true;
