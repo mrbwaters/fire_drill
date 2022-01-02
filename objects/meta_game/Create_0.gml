@@ -26,5 +26,14 @@ gpu_set_texfilter(false);
 show_tip	= false;
 tip			= "TIP NOT ASSIGNED";
 
+// Flags
+flag_rm_1 = false;
+flag_rm_2 = false;
+flag_rm_3 = false;
+flag_rm_4 = false;
+flag_rm_5 = false;
+flag_rm_6 = false;
+//current_checkpoint = 
+
 //Move to first room
 room_goto(first_room);
