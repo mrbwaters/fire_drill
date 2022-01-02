@@ -1,1 +1,1 @@
-npc_step()
+npc_step();
