@@ -10,5 +10,6 @@ function scr_player_death(){
 	hspd = 0;
 	
 	// Carry out death actions here
+	sprite_index = spr_pc_death;
 	player_death();
 }

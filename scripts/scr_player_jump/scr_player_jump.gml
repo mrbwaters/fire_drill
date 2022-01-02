@@ -11,6 +11,9 @@ function scr_player_jump(){
 		Meta Actions - for simpler gameplay, idle might be the only state we want to be in to do other actions (except for Pause)
 			Pause
 	*/
+	
+	sprite_index = spr_pc_jump;
+	
 	// Change horizontal speed if user input is received for LEFT and RIGHT
 	hspd = v_run * horiz_input
 	

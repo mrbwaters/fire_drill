@@ -15,7 +15,7 @@ function scr_player_run(){
 			Pause - player should be able to enter Pause from any state
 	*/
 	// Always do prior_state checks before setting the prior_state
-	
+	sprite_index = spr_pc;
 	// Save prior state
 	prior_state = state;
 	
