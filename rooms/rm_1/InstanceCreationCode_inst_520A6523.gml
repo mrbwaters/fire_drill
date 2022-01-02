@@ -1,1 +1,0 @@
-grid_x_move = 3;

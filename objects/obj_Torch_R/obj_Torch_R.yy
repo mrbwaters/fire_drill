@@ -27,11 +27,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Props",
-    "path": "folders/Objects/Props.yy",
+    "name": "Doodads",
+    "path": "folders/Objects/Doodads.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_Torch_R",
+  "name": "obj_torch_r",
   "tags": [],
   "resourceType": "GMObject",
 }
