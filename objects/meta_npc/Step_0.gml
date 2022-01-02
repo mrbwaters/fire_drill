@@ -12,3 +12,5 @@ if distance_to_object(obj_pc) >= 10 {
 		}	
 	}
 }
+
+if talking = true then obj_pc.state = states.idle; // Disables PC action while talking
