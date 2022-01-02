@@ -31,6 +31,7 @@ function scr_player_jump(){
 	// Fall after colliding with a wall during a jump
     if (prior_state == states.jump and coords[?"vert_collide"] == true) {
 		state = states.fall;
+		apogee =  y;
 		sfx_play("Land");
 	}
 
@@ -40,6 +41,7 @@ function scr_player_jump(){
 	// Begin to fall after arbitrary time
 	if (current_time > t_jump + t_float) {
 		state = states.fall;
+		apogee =  y;
 	}
 	
 	// If collide with ladder and key pressed is UP Change to Climb

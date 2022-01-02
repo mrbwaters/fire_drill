@@ -25,6 +25,7 @@ function scr_player_idle(){
 	// Get pushed off moving object Last state is idle and vspd > 0 Change state to Fall
 	if (prior_state == states.idle and vspd > 0 and coords[?"dy"] != 0) {
 		state = states.fall;
+		apogee =  y;
 	}
 	
 	// Wall squish to death
@@ -82,6 +83,7 @@ function scr_player_idle(){
 	// Walking off ladder or wall, change to fall.
 	if (!place_meeting(x,y+1, obj_ladder) and !place_meeting(x,y+1, obj_wall) and !place_meeting(x,y+1, obj_platform_move)) {
 		state = states.fall;
+		apogee =  y;
 	}
 	
 	

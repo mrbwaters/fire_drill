@@ -47,4 +47,8 @@ function scr_player_fall(){
 	if (instance_place(x, y, meta_damage)) {
 		state = states.death;
 	}
+	
+	if (coords[?"vert_collide"] == true and coords[?"dy"] > 0 and (y - apogee) > fall_dead) {
+		state =  states.death;
+	}
 }

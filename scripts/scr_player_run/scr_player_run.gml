@@ -51,6 +51,7 @@ function scr_player_run(){
 	// When not on top of something Change state to Fall
 	if (vspd > 0) {
 		state = states.fall;
+		apogee =  y;
 	}
 	
 	// Change to death state
@@ -62,6 +63,7 @@ function scr_player_run(){
 	// Walking off ladder or wall, change to fall.
 	if (!place_meeting(x,y+1, obj_ladder) and !place_meeting(x,y+1, obj_wall) and !place_meeting(x,y+1, obj_platform_move)) {
 		state = states.fall;
+		apogee =  y;
 	}
 	
 
