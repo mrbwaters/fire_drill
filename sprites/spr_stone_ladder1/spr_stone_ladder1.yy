@@ -26,6 +26,7 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"a71ee310-168d-4b82-b1eb-3198db249c84","path":"sprites/spr_stone_ladder1/spr_stone_ladder1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"a71ee310-168d-4b82-b1eb-3198db249c84","path":"sprites/spr_stone_ladder1/spr_stone_ladder1.yy",},"LayerId":{"name":"7e6329c7-aa5e-4afe-8d67-50d1d804490f","path":"sprites/spr_stone_ladder1/spr_stone_ladder1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"a71ee310-168d-4b82-b1eb-3198db249c84","path":"sprites/spr_stone_ladder1/spr_stone_ladder1.yy",},"LayerId":{"name":"4baff083-1e24-42bf-a1c0-e4bed6d55daf","path":"sprites/spr_stone_ladder1/spr_stone_ladder1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_stone_ladder1","path":"sprites/spr_stone_ladder1/spr_stone_ladder1.yy",},"resourceVersion":"1.0","name":"a71ee310-168d-4b82-b1eb-3198db249c84","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -65,6 +66,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"4baff083-1e24-42bf-a1c0-e4bed6d55daf","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7e6329c7-aa5e-4afe-8d67-50d1d804490f","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
