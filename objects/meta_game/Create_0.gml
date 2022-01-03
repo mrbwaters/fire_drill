@@ -33,7 +33,8 @@ flag_rm_3 = false;
 flag_rm_4 = false;
 flag_rm_5 = false;
 flag_rm_6 = false;
-//current_checkpoint = 
+
+current_checkpoint = rm_1;
 
 //Move to first room
 room_goto(first_room);

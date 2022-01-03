@@ -32,7 +32,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_flagpole",
+  "name": "obj_checkpoint",
   "tags": [],
   "resourceType": "GMObject",
 }
