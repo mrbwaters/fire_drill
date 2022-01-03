@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sfx_determinded_climber_2.mp3",
-  "duration": 2.45551,
+  "duration": 1.724082,
   "parent": {
     "name": "VOX",
     "path": "folders/Sounds/VOX.yy",
