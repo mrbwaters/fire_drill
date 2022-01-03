@@ -39,7 +39,7 @@ function bgm_stop() {
 }
 
 function sfx_play(_event){
-	_sfx_index = sfx_hit1_C2_dry
+	_sfx_index = sfx_hit1_C2_dry;
 	
 switch(_event) {
 	case "Jump":	var _sfx_index	= sfx_hit1_C2_dry;	break;
