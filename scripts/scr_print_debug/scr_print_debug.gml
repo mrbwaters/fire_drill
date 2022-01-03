@@ -4,7 +4,7 @@
 function print_debug_step() {
 	show_debug_message("DEBUG: STATE >>> " + string(state) + "  PRIOR_STATE >>> " + string(prior_state));
 	show_debug_message(
-		"DBG tol >> " + string(coords[?"tol"]) +
+		//"DBG tol >> " + string(coords[?"tol"]) +
 		" DBG x_new >> " + string(coords[?"x_new"]) +
 		" DBG y_new >> " + string(coords[?"y_new"]) +
 		" DBG dx >> " + string(coords[?"dx"]) +
