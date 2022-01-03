@@ -115,6 +115,7 @@
     {"id":{"name":"sfx_determinded_climber_4","path":"sounds/sfx_determinded_climber_4/sfx_determinded_climber_4.yy",},"order":10,},
     {"id":{"name":"meta_prop","path":"objects/meta_prop/meta_prop.yy",},"order":4,},
     {"id":{"name":"spr_Torch_R","path":"sprites/spr_Torch_R/spr_Torch_R.yy",},"order":1,},
+    {"id":{"name":"rm_6","path":"rooms/rm_6/rm_6.yy",},"order":13,},
     {"id":{"name":"sfx_hit1_C2_dry","path":"sounds/sfx_hit1_C2_dry/sfx_hit1_C2_dry.yy",},"order":0,},
     {"id":{"name":"obj_torch_r","path":"objects/obj_torch_r/obj_torch_r.yy",},"order":1,},
     {"id":{"name":"spr_pc_jump","path":"sprites/spr_pc_jump/spr_pc_jump.yy",},"order":5,},
@@ -143,6 +144,7 @@
     {"roomId":{"name":"rm_4","path":"rooms/rm_4/rm_4.yy",},},
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_5","path":"rooms/rm_5/rm_5.yy",},},
+    {"roomId":{"name":"rm_6","path":"rooms/rm_6/rm_6.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
