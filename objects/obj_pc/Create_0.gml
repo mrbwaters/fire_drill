@@ -39,4 +39,4 @@ v_run		= 1/20;	// running velocity
 a_grav		= 0.000075; // gravity acceleration
 
 // Fall vars
-fall_dead = 40;
+fall_dead = 96;
