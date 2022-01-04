@@ -9,6 +9,11 @@ function scr_player_step(){
 	// Get surroundings before player state is updated
 	nearby = ds_map_create();
 	nearby = scr_get_surroundings();
+	/* 
+	show_debug_message("DBG Wall >> " + string(nearby[?"top"][?"obj_wall"]));
+	show_debug_message("DBG Ladder >> " + string(nearby[?"top"][?"obj_ladder"]));
+	show_debug_message("DBG Platform >> " + string(nearby[?"top"][?"obj_platform_move"]));
+	*/
 	
 	// Enter the state machine
 	apply_player_state();

@@ -44,10 +44,5 @@ function scr_get_surroundings(){
 	
 	//ToDo add logic for all positions
 	
-	/* 
-	show_debug_message("DBG Wall >> " + string(results[?"top"][?"obj_wall"]));
-	show_debug_message("DBG Ladder >> " + string(results[?"top"][?"obj_ladder"]));
-	show_debug_message("DBG Platform >> " + string(results[?"top"][?"obj_platform_move"]));
-	*/
 	return results;
 }
