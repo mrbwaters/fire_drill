@@ -18,7 +18,6 @@
     {"id":{"name":"Track1_Spooky_Demo_0b","path":"sounds/Track1_Spooky_Demo_0b/Track1_Spooky_Demo_0b.yy",},"order":0,},
     {"id":{"name":"spr_spike","path":"sprites/spr_spike/spr_spike.yy",},"order":6,},
     {"id":{"name":"sfx_thud2_C2_dry","path":"sounds/sfx_thud2_C2_dry/sfx_thud2_C2_dry.yy",},"order":5,},
-    {"id":{"name":"meta_blackout","path":"objects/meta_blackout/meta_blackout.yy",},"order":1,},
     {"id":{"name":"rm_4","path":"rooms/rm_4/rm_4.yy",},"order":6,},
     {"id":{"name":"spr_inj_clm","path":"sprites/spr_inj_clm/spr_inj_clm.yy",},"order":4,},
     {"id":{"name":"Cave1","path":"sprites/Cave1/Cave1.yy",},"order":2,},

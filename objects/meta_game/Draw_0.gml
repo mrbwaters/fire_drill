@@ -10,3 +10,10 @@ if show_tip {
 	draw_sprite(spr_tip, 0, tboxx, tboxy);
 	draw_text_transformed(tboxx + 2, tboxy + (sprite_get_height(spr_tip)) / 3, tip, 0.25, 0.25, 0);
 }
+
+if blackout {
+	draw_set_alpha(blackout_alpha);
+	draw_set_colour(c_black);
+	draw_rectangle(0, 0, room_width, room_height, -1);
+	draw_set_alpha(1); //reset alpha value so it doesn't mess with other draw events	
+}
