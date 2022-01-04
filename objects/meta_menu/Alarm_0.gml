@@ -1,1 +1,1 @@
-can_press = true;
+can_move = true;
