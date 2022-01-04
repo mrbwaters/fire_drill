@@ -6,6 +6,20 @@ function scr_player_step(){
 	if horiz_input>0 facing = "Right";
 	if horiz_input<0 facing = "Left";
 	
+	// Get surroundings before player state is updated
+	nearby = ds_map_create();
+	nearby = scr_get_surroundings();
+	
+	obj = "obj_ladder"
+	show_debug_message("DBG wall TL >> " + string(nearby[?"top_left"][? obj]));
+	show_debug_message("DBG wall T  >> " + string(nearby[?"top"][? obj]));
+	show_debug_message("DBG wall TR >> " + string(nearby[?"top_right"][? obj]));
+	show_debug_message("DBG wall R  >> " + string(nearby[?"right"][? obj]));
+	show_debug_message("DBG wall BR >> " + string(nearby[?"bottom_right"][? obj]));
+	show_debug_message("DBG wall B  >> " + string(nearby[?"bottom"][? obj]));
+	show_debug_message("DBG wall BL >> " + string(nearby[?"bottom_left"][? obj]));
+	show_debug_message("DBG wall L  >> " + string(nearby[?"left"][? obj]));
+	
 	// Enter the state machine
 	apply_player_state();
 	
@@ -23,7 +37,6 @@ function scr_player_step(){
 			meta_game.show_tip = true;
 		if target.talking then meta_game.show_tip = false;
 	} else meta_game.show_tip = false;
-
 
 	// Print Debug Messages
 	print_debug_step();
