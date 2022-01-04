@@ -10,6 +10,8 @@ function print_debug_step() {
 		" DBG dx >> " + string(coords[?"dx"]) +
 		" DBG dy >> " + string(coords[?"dy"]) +
 		" DBG vert_collide >> " + string(coords[?"vert_collide"]) +
-		" DBG horiz_collide >> " + string(coords[?"horiz_collide"])
+		" DBG horiz_collide >> " + string(coords[?"horiz_collide"]) + 
+		" DBG hspd >> " + string(hspd) +
+		" DBG vspd >> " + string(vspd)
 	);
 }

@@ -6,6 +6,10 @@ function scr_player_step(){
 	if horiz_input>0 facing = "Right";
 	if horiz_input<0 facing = "Left";
 	
+	// Get surroundings before player state is updated
+	nearby = ds_map_create();
+	nearby = scr_get_surroundings();
+	
 	// Enter the state machine
 	apply_player_state();
 	
@@ -23,7 +27,6 @@ function scr_player_step(){
 			meta_game.show_tip = true;
 		if target.talking then meta_game.show_tip = false;
 	} else meta_game.show_tip = false;
-
 
 	// Print Debug Messages
 	print_debug_step();
