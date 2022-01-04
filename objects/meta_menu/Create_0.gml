@@ -21,3 +21,5 @@ button_array[1, TEXT]	= sound;
 button_array[1, ACTION] = fn_mute;
 button_array[2, TEXT]	= "Quit";
 button_array[2, ACTION] = game_end;
+
+can_move = true;
