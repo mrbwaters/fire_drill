@@ -13,7 +13,7 @@ if !checked and meta_game.key_action {
 	sfx_play("Menu_Select");
 	
 	// Record location of PC so that respawns here on death.
-	meta_game.current_checkpoint = room;
-	meta_game.pcx = x;
-	meta_game.pcy = y;
+	meta_game.current_checkpoint_room = room;
+	meta_game.current_checkpoint_x = x;
+	meta_game.current_checkpoint_y = y;
 }

@@ -35,10 +35,11 @@ if blackout == true {
 	if blackout_alpha < 1 {
 	   blackout_alpha += 1 / blackout_fade_time; // alpha will reach 1 at set fade time
 	   if blackout_alpha >= 1 {
-			if meta_game.current_checkpoint == room then room_restart();
-			else room_goto(meta_game.current_checkpoint);
-			pcx = obj_checkpoint.x;
-			pcx = obj_checkpoint.y;
+			pcx = current_checkpoint_x;
+			pcy = current_checkpoint_y;			
+			if meta_game.current_checkpoint_room == room then room_restart();
+			else room_goto(meta_game.current_checkpoint_room);
+			
 			blackout_alpha = 0;
 			blackout = false;
 	   }
