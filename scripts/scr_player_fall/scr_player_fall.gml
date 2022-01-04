@@ -42,13 +42,18 @@ function scr_player_fall(){
 	if (place_meeting(x,y,obj_ladder) and vert_input < 0) {
 		state = states.climb;	
 	}
+	
+	// Idle when falling on top of ladder
+	if (nearby[?"bottom"][?"obj_ladder"] == true) {
+		state = states.idle;	
+	}
 
 	// Change to death state
 	if (instance_place(x, y, meta_damage)) {
 		state = states.death;
 	}
 	
-	if (coords[?"vert_collide"] == true and coords[?"dy"] > 0 and (y - apogee) > fall_dead) {
+	if ((nearby[?"bottom"][?"obj_wall"] == true or nearby[?"bottom"][?"obj_ladder"] == true or nearby[?"bottom"][?"obj_platform_move"] == true) and coords[?"dy"] > 0 and (y - apogee) > fall_dead) {
 		state =  states.death;
 	}
 }

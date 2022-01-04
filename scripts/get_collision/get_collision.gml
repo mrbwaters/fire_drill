@@ -16,7 +16,7 @@ function get_collision(target_object, results){
 	var _list_col_x= ds_list_create();
 	var _num = instance_place_list(x_test, y, target_object,_list_col_x, false);	
 	if (_num == 0) {
-		show_debug_message("No X Collision");
+		//show_debug_message("No X Collision");
 	}
 	
 	if (_num > 0) {
@@ -32,7 +32,7 @@ function get_collision(target_object, results){
 	var _list_col_y = ds_list_create();
 	var _num = instance_place_list(x_new, y_test, target_object,_list_col_y, false);	
 	if (_num == 0) {
-		show_debug_message("No Y Collision");
+		//show_debug_message("No Y Collision");
 	}
 	if (_num > 0) {
 		y_delta = scr_get_delta_axis(_num, _list_col_y, "vert", x_new, y_test);

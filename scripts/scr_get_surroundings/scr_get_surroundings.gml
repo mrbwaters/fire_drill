@@ -1,9 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_get_surroundings(){
-	original_hspd = hspd;
-	original_vspd = vspd;
-	
 	// Create results dictionary
 	results = ds_map_create();
 	results[?"top_left"] = ds_map_create();
@@ -16,33 +13,63 @@ function scr_get_surroundings(){
 	results[?"left"] = ds_map_create();
 	
 	// Size of distance to look ahead for collisions
-	const = 1;
+	x_const = 8;
+	y_const = 1;
+	test_x = x;
+	test_y = y;
 
 	// Create list of objects to check
 	collidables =  [obj_wall, obj_ladder, obj_platform_move];
 	
 	// Loop through each position
-	var size, key, i, 
-	size = ds_map_size(results);
-	key = ds_map_find_first(results);
-	for (i = 0; i < size; i++;){
-	   // Check top
-	   if (key == "top") {
-		   // Set hspd and vspd and modify the variable based on the grid position
-		   vspd -= const;
-		   
-		   // Loop through the objects and return the collisions for each object and store in proper result key
-		   results[?"top"] = scr_get_obj_collisions(collidables);
-	   
-		   // Change speeds back to original values
-		   vspd = original_vspd
-		   // Get the next key in the dictionary
-		   key = ds_map_find_next(results, key);
-	   }
-	   
+	for (var key = ds_map_find_first(results); !is_undefined(key); key = ds_map_find_next(results, key)) {
+		// Check top
+		if (key == "top") {
+			// Set x and y and modify the variable based on the grid position
+			test_y = y - y_const;
+		}
+		// Check all other locations
+		if (key == "top_left") {
+			// Top vert change
+			test_y = y - y_const;
+			// Left horiz change
+			test_x = x + x_const;
+		}
+
+		if (key == "top_right") {
+			// Top vert change
+			test_y = y - y_const;
+			// Right horiz change
+			test_x = x + x_const;
+		}
+		if (key == "right") {
+			// Right horiz change
+			test_x = x + y_const;
+		}
+		if (key == "bottom_right") {
+			// Bottom vert change
+			test_y = y + y_const;
+			// Right horiz change
+			test_x = x + x_const;
+		}
+		if (key == "bottom") {
+			// Bottom vert change
+			test_y = y + y_const;
+		}
+		if (key == "bottom_left") {
+			// Bottom vert change
+			test_y = y + y_const;
+			// Left horiz change
+			test_x = x - x_const;
+		}
+		if (key == "left") {
+			// Left horiz change
+			test_x = x - x_const;
+		}
+		// Assign collision results to dictionary object
+		results[? key] = scr_get_obj_collisions(test_x, test_y, collidables);
+		test_x = x;
+		test_y = y;
 	}
-	
-	//ToDo add logic for all positions
-	
 	return results;
 }

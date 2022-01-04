@@ -9,11 +9,16 @@ function scr_player_step(){
 	// Get surroundings before player state is updated
 	nearby = ds_map_create();
 	nearby = scr_get_surroundings();
-	/* 
-	show_debug_message("DBG Wall >> " + string(nearby[?"top"][?"obj_wall"]));
-	show_debug_message("DBG Ladder >> " + string(nearby[?"top"][?"obj_ladder"]));
-	show_debug_message("DBG Platform >> " + string(nearby[?"top"][?"obj_platform_move"]));
-	*/
+	
+	obj = "obj_ladder"
+	show_debug_message("DBG wall TL >> " + string(nearby[?"top_left"][? obj]));
+	show_debug_message("DBG wall T  >> " + string(nearby[?"top"][? obj]));
+	show_debug_message("DBG wall TR >> " + string(nearby[?"top_right"][? obj]));
+	show_debug_message("DBG wall R  >> " + string(nearby[?"right"][? obj]));
+	show_debug_message("DBG wall BR >> " + string(nearby[?"bottom_right"][? obj]));
+	show_debug_message("DBG wall B  >> " + string(nearby[?"bottom"][? obj]));
+	show_debug_message("DBG wall BL >> " + string(nearby[?"bottom_left"][? obj]));
+	show_debug_message("DBG wall L  >> " + string(nearby[?"left"][? obj]));
 	
 	// Enter the state machine
 	apply_player_state();
