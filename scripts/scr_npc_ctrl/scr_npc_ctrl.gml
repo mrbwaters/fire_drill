@@ -8,12 +8,12 @@ function npc_step() {
 		if meta_game.key_action {		
 			if talking == false {
 				talking = true;
-				switch object_index {
-					case obj_det_clm:	vox_play("npc_det_clm");	break;
-					case obj_inj_clm:	vox_play("npc_inj_clm");	break;
-					case obj_twr_astc:	vox_play("npc_twr_astc");	break;
-					case obj_wk_war:	vox_play("npc_wk_war");		break;
-				}
+				//switch object_index {
+				//	case obj_det_clm:	vox_play("npc_det_clm");	break;
+				//	case obj_inj_clm:	vox_play("npc_inj_clm");	break;
+				//	case obj_twr_astc:	vox_play("npc_twr_astc");	break;
+				//	case obj_wk_war:	vox_play("npc_wk_war");		break;
+				//}
 			} else {
 				if PAGE < (array_length(dialog[CONVERSATION]) - 1) then PAGE++;
 				else {
@@ -24,5 +24,5 @@ function npc_step() {
 			}
 		}
 	}
-if talking == true then obj_pc.state = states.idle; // Disables PC action while talking
+if talking == true then obj_pc.state = pc_states.idle; // Disables PC action while talking
 }

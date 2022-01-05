@@ -8,7 +8,7 @@ function scr_player_idle(){
 		If there is a collision on top of a moving obj, then match movement with moving box - this will also need to consider what happens if your on a moving box and then collide with a wall (obj_pc must get pushed off the moving obj)
 		Apply gravity and collisions when in idle to be pushed off a moving object
 		(To Be Handled in Climb state) If there is a collision with a ladder then do no apply gravity to maintain a static vertical position when no user input is supplied
-	Transition to states
+	Transition to pc_states
 		Run - can run from idle state after user input is supplied
 		Jump - can jump from idle state after user input is supplied
 		Climb - can climb from idle state after a collision with ladder is made (either lader intesecting or lader below)
@@ -23,19 +23,19 @@ function scr_player_idle(){
 	// Always do prior_state checks before setting the prior_state
 	sprite_index = spr_pc;
 	// Get pushed off moving object Last state is idle and vspd > 0 Change state to Fall
-	if (prior_state == states.idle and vspd > 0 and coords[?"dy"] != 0) {
-		state = states.fall;
+	if (prior_state == pc_states.idle and vspd > 0 and coords[?"dy"] != 0) {
+		state = pc_states.fall;
 		apogee =  y;
 	}
 	
 	// Wall squish to death
-	if (prior_state == states.idle and coords[?"vert_collide"] and coords[?"horiz_collide"]) {
-		state = states.death;
+	if (prior_state == pc_states.idle and coords[?"vert_collide"] and coords[?"horiz_collide"]) {
+		state = pc_states.death;
 	}
 	
 	// TODO Fall from idle or apply gravity in move function
-	//if (prior_state == states.idle and coords[?"dx"] == 0 and coords[?"dy"] == 0) {
-	//	state = states.fall;
+	//if (prior_state == pc_states.idle and coords[?"dx"] == 0 and coords[?"dy"] == 0) {
+	//	state = pc_states.fall;
 	//}
 	
 	// Save prior state
@@ -56,7 +56,7 @@ function scr_player_idle(){
 	// Transisitons
 	// On top bounding box of obj_wall (logic for on_ground) then change state to Run
 	if (horiz_input != 0) {
-		state = states.run;
+		state = pc_states.run;
 	}
 	
 	// Change state to Jump
@@ -66,23 +66,23 @@ function scr_player_idle(){
 		
 	// Start the jump timer here
 		t_jump = current_time
-		state = states.jump;	
+		state = pc_states.jump;	
 	}
 	
 	// Collision with obj_ladder and input is up then Change state to Climb
 	if (place_meeting(x,y, obj_ladder) and vert_input < 0 ) {
-		state = states.climb;
+		state = pc_states.climb;
 	}
 	
 	// Obj_ladder below and input is vspd is down then Change state to Climb make sure not colliding with the ground
 	if (place_meeting(x,y+3, obj_ladder) and vert_input > 0 and !place_meeting(x,y+1,obj_wall)) {
-		state = states.climb;
+		state = pc_states.climb;
 	}
 	
 	
 	// Walking off ladder or wall, change to fall.
 	if (!place_meeting(x,y+1, obj_ladder) and !place_meeting(x,y+1, obj_wall) and !place_meeting(x,y+1, obj_platform_move)) {
-		state = states.fall;
+		state = pc_states.fall;
 		apogee =  y;
 	}
 	

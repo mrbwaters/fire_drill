@@ -1,14 +1,22 @@
-//META
+// Meta
 testing		= false;
 
+// pc_states
+enum game_states {
+	start,
+	menu,
+	levels,
+	pause,
+	death
+}
+
 // Room logic
-first_room	= rm_menu;
 game_begin	= true;
 next_room	= rm_1; // Use to start/resume action
 
 //Audio logic
 mute = false;
-bgm_play();
+//bgm_play();
 
 //Physics Globals
 t_scale = .75; //Global Time Scale
@@ -42,5 +50,4 @@ blackout_fade_time	= 2 * room_speed;
 pcx = current_checkpoint_x;
 pcy = current_checkpoint_y;
 
-//Move to first room
-room_goto(first_room);
+state = game_states.start;

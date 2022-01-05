@@ -4,7 +4,7 @@ function scr_player_run(){
 	/*
 	Description
 		User input is converted to horizontal movement
-	Transition to states
+	Transition to pc_states
 		Idle - if a player collides with an object they should stop running
 		Climb - a player can enter climb state after a collision with a ladder
 		Jump - a player can enter the Jump sate after a key press
@@ -33,36 +33,36 @@ function scr_player_run(){
 	// Transisitons
 	// If top of bounding box obj_wall and horiz_input == 0 Change state to Idle
 	if (horiz_input == 0) {
-		state = states.idle;
+		state = pc_states.idle;
 	}
 	
 	// If collide with ladder and key pressed is UP Change to Climb
 	if (place_meeting(x,y,obj_ladder) and vert_input < 0) {
-		state = states.climb;	
+		state = pc_states.climb;	
 	}
 	
 	// Change state to Jump
 	if (jump_input != 0) {
 		// Start the jump timer here
 		t_jump = current_time
-		state = states.jump;	
+		state = pc_states.jump;	
 	}
 	
 	// When not on top of something Change state to Fall
 	if (vspd > 0) {
-		state = states.fall;
+		state = pc_states.fall;
 		apogee =  y;
 	}
 	
 	// Change to death state
 	// Spike collision
 	if (instance_place(x, y, meta_damage)) {
-		state = states.death;
+		state = pc_states.death;
 	}
 	
 	// Walking off ladder or wall, change to fall.
 	if (!place_meeting(x,y+1, obj_ladder) and !place_meeting(x,y+1, obj_wall) and !place_meeting(x,y+1, obj_platform_move)) {
-		state = states.fall;
+		state = pc_states.fall;
 		apogee =  y;
 	}
 	

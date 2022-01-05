@@ -1,4 +1,3 @@
-
 scr_player_step();
 
 if (room != init_room) {

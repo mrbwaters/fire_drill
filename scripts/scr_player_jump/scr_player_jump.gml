@@ -6,7 +6,7 @@ function scr_player_jump(){
 		Convert player input to vertical movement
 		This state should be considered the arbitrary upward airborne movement (opposite to fall)
 		This should support horizontal movement supplied by user input (this is distinct from the Run state)
-	Transition to states
+	Transition to pc_states
 		Fall - this should be the only state Jump can trigger
 		Meta Actions - for simpler gameplay, idle might be the only state we want to be in to do other actions (except for Pause)
 			Pause
@@ -18,21 +18,21 @@ function scr_player_jump(){
 	// Always do prior_state checks before setting the prior_state
 	
 	// Apply values to key movement variables make sure not to double jump
-	if (prior_state != states.jump) {
+	if (prior_state != pc_states.jump) {
 		vspd += -jspd_max;
 		
 		// Sound and animation
-		sfx_play("Jump");
+		//sfx_play("Jump");
 		sprite_index = spr_pc_jump;
 		
 		
 	}
     
 	// Fall after colliding with a wall during a jump
-    if (prior_state == states.jump and coords[?"vert_collide"] == true) {
-		state = states.fall;
+    if (prior_state == pc_states.jump and coords[?"vert_collide"] == true) {
+		state = pc_states.fall;
 		apogee =  y;
-		sfx_play("Land");
+		//sfx_play("Land");
 	}
 
 	// Save prior state after the prior state check
@@ -40,12 +40,12 @@ function scr_player_jump(){
 	
 	// Begin to fall after arbitrary time
 	if (current_time > t_jump + t_float) {
-		state = states.fall;
+		state = pc_states.fall;
 		apogee =  y;
 	}
 	
 	// If collide with ladder and key pressed is UP Change to Climb
 	if (place_meeting(x,y,obj_ladder) and vert_input < 0) {
-		state = states.climb;	
+		state = pc_states.climb;	
 	}
 }

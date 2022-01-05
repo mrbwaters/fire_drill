@@ -6,7 +6,7 @@ function scr_player_climb(){
 		Convert player input to vertical movement up or down a ladder object
 		Convert player up input to engage the ladder
 		When player input is not received and collision with ladder stay in climb
-	Transition to states
+	Transition to pc_states
 		Run - from Climb, a player should be able to move left and right
 		Jump - from Climb, a player should be able to jump
 		Idle - when not receiving player input and either at top or bottom of ladder
@@ -18,19 +18,19 @@ function scr_player_climb(){
 	sprite_index = spr_pc_climb;
 	
 	//Change to fall at bottom of ladder which will gracefully transition to idle
-	if (nearby[?"bottom"][?"obj_wall"] == true and vspd >= 0 and prior_state = states.climb) {
-		state = states.fall;
+	if (nearby[?"bottom"][?"obj_wall"] == true and vspd >= 0 and prior_state = pc_states.climb) {
+		state = pc_states.fall;
 	}
 	
 	// Fall off a ladder when there are no more ladders - adjust y_const in scr_get_surroundings to fine tune the trigger
 	if (nearby[?"top"][?"obj_ladder"] == false and nearby[?"bottom"][?"obj_ladder"] == false) {
-		state = states.fall;
+		state = pc_states.fall;
 	}
 	
 	//Change to idle at top of ladder
-	if (vspd <= 0 and prior_state = states.climb and !place_meeting(x,y, obj_ladder)) {
+	if (vspd <= 0 and prior_state = pc_states.climb and !place_meeting(x,y, obj_ladder)) {
 		show_debug_message("CLIMB DBG");
-		state = states.idle;
+		state = pc_states.idle;
 	}
 	
 	// Save prior state
@@ -54,11 +54,11 @@ function scr_player_climb(){
 			}
 		}
 	
-	// Transition to states
+	// Transition to pc_states
 	// Change state to Jump
 	if (jump_input != 0) {
 		// Start the jump timer here
 		t_jump = current_time;
-		state = states.jump;	
+		state = pc_states.jump;	
 	}
 }

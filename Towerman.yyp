@@ -44,6 +44,7 @@
     {"id":{"name":"spr_twr_astc","path":"sprites/spr_twr_astc/spr_twr_astc.yy",},"order":3,},
     {"id":{"name":"Cave2a","path":"sprites/Cave2a/Cave2a.yy",},"order":1,},
     {"id":{"name":"obj_ladder","path":"objects/obj_ladder/obj_ladder.yy",},"order":1,},
+    {"id":{"name":"scr_game_step","path":"scripts/scr_game_step/scr_game_step.yy",},"order":2,},
     {"id":{"name":"sfx_weekend_warrior_1","path":"sounds/sfx_weekend_warrior_1/sfx_weekend_warrior_1.yy",},"order":5,},
     {"id":{"name":"spr_det_clim","path":"sprites/spr_det_clim/spr_det_clim.yy",},"order":1,},
     {"id":{"name":"spr_stone_floor2","path":"sprites/spr_stone_floor2/spr_stone_floor2.yy",},"order":1,},
