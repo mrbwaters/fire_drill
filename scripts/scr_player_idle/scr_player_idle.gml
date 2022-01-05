@@ -23,22 +23,10 @@ function scr_player_idle(){
 	// Always do prior_state checks before setting the prior_state
 	sprite_index = spr_pc;
 	
-	// Get pushed off moving object Last state is idle and vspd > 0 Change state to Fall
-	if (prior_state == states.idle and vspd > 0 and coords[?"dy"] != 0) {
-		state = states.fall;
-		apogee =  y;
-	}
-	
 	// Wall squish to death
 	if (prior_state == states.idle and coords[?"vert_collide"] and coords[?"horiz_collide"]) {
 		state = states.death;
 	}
-	
-	// TODO Fall from idle or apply gravity in move function
-	//if (prior_state == states.idle and !place_meeting(x,y,obj_wall) and !place_meeting(x,y,obj_platform_move)) {
-	//	state = states.fall;
-	//	apogee = y;
-	//}
 	
 	// Save prior state
 	prior_state = state;
@@ -48,11 +36,12 @@ function scr_player_idle(){
 	vspd = 0;
 	
 	// Local variable for moving platform logic
-	moving_platform_id = instance_place(x,y, obj_platform_move);
+	moving_platform_id = instance_place(x,y+1, obj_platform_move);
 	
 	//Stay on moving platform - If on top bounding box of obj_platform_move then match hspd of target object
 	if (moving_platform_id) {
 		hspd = variable_instance_get(moving_platform_id, "hspd");
+		vspd = variable_instance_get(moving_platform_id, "vspd");
 	} 
 
 	// Transisitons
@@ -63,7 +52,7 @@ function scr_player_idle(){
 	// Change state to Jump
 	if (jump_input != 0) {
 		// Reset hspd to 0 if on a moving platform and attempting to jump rather than carrying the momentum
-		if (moving_platform_id) hspd = 0;
+		if (moving_platform_id) hspd = 0; vspd = 0;
 		
 	    // Start the jump timer here
 		t_jump = current_time
@@ -81,8 +70,10 @@ function scr_player_idle(){
 		else state = states.climb;
 	}
 	
-	if (!place_meeting(x,y+1,obj_wall) and !place_meeting(x,y+1,obj_ladder) and !place_meeting(x,y+1, obj_platform_move)) state = states.fall; apogee=y; return;
-		
+	if (!nearby[?"bottom"][?"obj_wall"] and !nearby[?"bottom"][?"obj_ladder"] and !nearby[?"bottom"][?"obj_platform_move"]) {
+		state = states.fall;
+		apogee = y;
+	}
 	// Change to death state
 	// Enemy collision
 }

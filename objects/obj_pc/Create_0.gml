@@ -40,4 +40,3 @@ a_grav		= 0.000075; // gravity acceleration
 
 // Fall vars
 fall_dead = 96;
-
