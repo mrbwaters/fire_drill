@@ -13,7 +13,6 @@ next_room	= rm_1; // Use to start/resume action
 
 //Audio logic
 mute = false;
-//bgm_play();
 
 //Physics Globals
 t_scale = .75; //Global Time Scale

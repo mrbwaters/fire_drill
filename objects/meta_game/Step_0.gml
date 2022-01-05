@@ -1,22 +1,6 @@
 scr_game_step();
 
-//// Audio Control
-// Start Background Music
-//if !room_init {
-//	bgm_play();
-//	room_init=true;
-//}
 
-
-//if mute {
-//	audio_sound_gain(global._bgm,.0,.1)
-//	_sfx_gain = 0;
-//}
-
-//if !mute {
-//	audio_sound_gain(global._bgm,.03,.1)
-//	_sfx_gain = 0.06;
-//}
 
 // Blackout
 if blackout == true {

@@ -18,7 +18,7 @@ function print_debug_console() {
 function player_death() {
 	sprite_index = spr_pc_death;
 	meta_game.blackout = true; // Fade out and change room.
-	//sfx_play("Death");
+	sfx_play("Death");
 	//bgm_stop();
 }
 

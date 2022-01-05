@@ -22,7 +22,7 @@ function scr_player_jump(){
 		vspd += -jspd_max;
 		
 		// Sound and animation
-		//sfx_play("Jump");
+		sfx_play("Jump");
 		sprite_index = spr_pc_jump;
 		
 		
@@ -32,7 +32,7 @@ function scr_player_jump(){
     if (prior_state == pc_states.jump and coords[?"vert_collide"] == true) {
 		state = pc_states.fall;
 		apogee =  y;
-		//sfx_play("Land");
+		sfx_play("Land");
 	}
 
 	// Save prior state after the prior state check
