@@ -35,12 +35,6 @@ function scr_player_climb(){
 		stop = true;
 	}
 	
-	if (prior_state == states.climb and jump_input != 0) {
-		// Start the jump timer here
-		t_jump = current_time;
-		state = states.jump;	
-	}
-	
 	// Save prior state
 	prior_state = state;
 	
@@ -62,7 +56,12 @@ function scr_player_climb(){
 			}
 	}
 	
-	if (vert_input == 0 ){
+	if (jump_input) {
+		t_jump = current_time
+		state = states.jump;
+	}
+	
+	if (vert_input == 0 and state != states.jump){
 		state = states.climb;
 		if (stop) state = states.idle;
 	}
