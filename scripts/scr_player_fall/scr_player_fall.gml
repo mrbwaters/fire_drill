@@ -33,7 +33,7 @@ function scr_player_fall(){
 	}
 	
 	// Return to idle after a fall onto a moving platform
-	if (place_meeting(x,y + 1, obj_platform_move)) {
+	if (place_meeting(x,y, obj_platform_move)) {
 		state = states.idle;
 		sfx_play("Land")
 	}
@@ -44,7 +44,8 @@ function scr_player_fall(){
 	}
 	
 	// Idle when falling on top of ladder
-	if (nearby[?"bottom"][?"obj_ladder"] == true) {
+	if (nearby[?"bottom"][?"obj_ladder"] == true and vert_input != 0) {
+		vspd = 0;
 		state = states.idle;	
 	}
 

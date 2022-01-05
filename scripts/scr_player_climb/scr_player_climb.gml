@@ -16,21 +16,29 @@ function scr_player_climb(){
 	// Always do prior_state checks before setting the prior_state
 	
 	sprite_index = spr_pc_climb;
+	stop = false;
 	
-	//Change to fall at bottom of ladder which will gracefully transition to idle
-	if (nearby[?"bottom"][?"obj_wall"] == true and vspd >= 0 and prior_state = states.climb) {
+	//Do no climb at a wall
+	if (nearby[?"bottom"][?"obj_wall"] == true and prior_state == states.climb) {
+		vert_input = 0;
+		stop = true;
+	}
+	
+	// Fall at ladder bottom
+	if (vert_input >= 0 and !place_meeting(x,y,obj_ladder) and prior_state == states.climb) {
 		state = states.fall;
 	}
 	
-	// Fall off a ladder when there are no more ladders - adjust y_const in scr_get_surroundings to fine tune the trigger
-	if (nearby[?"top"][?"obj_ladder"] == false and nearby[?"bottom"][?"obj_ladder"] == false) {
-		state = states.fall;
+	//Do not climb at top of ladder
+	if (vert_input <= 0 and prior_state = states.climb and !place_meeting(x,y, obj_ladder)) {
+		vert_input = 0;
+		stop = true;
 	}
 	
-	//Change to idle at top of ladder
-	if (vspd <= 0 and prior_state = states.climb and !place_meeting(x,y, obj_ladder)) {
-		show_debug_message("CLIMB DBG");
-		state = states.idle;
+	if (prior_state == states.climb and jump_input != 0) {
+		// Start the jump timer here
+		t_jump = current_time;
+		state = states.jump;	
 	}
 	
 	// Save prior state
@@ -52,13 +60,10 @@ function scr_player_climb(){
 		if (abs(x/meta_game.grid_scale - dx_sprite/meta_game.grid_scale - _ladder.x/meta_game.grid_scale) <= tol) {
 			x=_ladder.x + dx_sprite;
 			}
-		}
+	}
 	
-	// Transition to states
-	// Change state to Jump
-	if (jump_input != 0) {
-		// Start the jump timer here
-		t_jump = current_time;
-		state = states.jump;	
+	if (vert_input == 0 ){
+		state = states.climb;
+		if (stop) state = states.idle;
 	}
 }
