@@ -48,7 +48,7 @@ function scr_player_fall(){
 		state = pc_states.death;
 	}
 	
-	if ((nearby[?"bottom"][?"obj_wall"] == true or nearby[?"bottom"][?"obj_ladder"] == true or nearby[?"bottom"][?"obj_platform_move"] == true) and coords[?"dy"] > 0 and (y - apogee) > fall_dead) {
+	if ((place_meeting(x,y+8,obj_wall) or place_meeting(x,y+8,obj_ladder) or place_meeting(x,y+8,obj_platform_move)) and coords[?"dy"] > 0 and (y - apogee) > fall_dead) {
 		state =  pc_states.death;
 	}
 }
