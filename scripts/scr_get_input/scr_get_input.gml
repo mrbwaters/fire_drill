@@ -1,8 +1,6 @@
 function scr_get_input() {
 	//GAME
 	key_menu			= keyboard_check_pressed(vk_escape);
-	key_restart			= keyboard_check_pressed(vk_f5);
-	key_test			= keyboard_check_pressed(vk_backspace);
 	key_start			= keyboard_check_pressed(vk_enter);
 						
 	//PC				
