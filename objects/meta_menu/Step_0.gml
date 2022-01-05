@@ -20,5 +20,5 @@ if highlight < 0 then highlight = array_length(button_array) - 1;
 
 if (meta_game.key_action || meta_game.key_start) {
 	script_execute(button_array[highlight, ACTION]);
-		sfx_play("Menu_Select");
+	sfx_play("Menu_Select");
 }

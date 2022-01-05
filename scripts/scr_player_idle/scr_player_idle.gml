@@ -8,7 +8,7 @@ function scr_player_idle(){
 		If there is a collision on top of a moving obj, then match movement with moving box - this will also need to consider what happens if your on a moving box and then collide with a wall (obj_pc must get pushed off the moving obj)
 		Apply gravity and collisions when in idle to be pushed off a moving object
 		(To Be Handled in Climb state) If there is a collision with a ladder then do no apply gravity to maintain a static vertical position when no user input is supplied
-	Transition to states
+	Transition to pc_states
 		Run - can run from idle state after user input is supplied
 		Jump - can jump from idle state after user input is supplied
 		Climb - can climb from idle state after a collision with ladder is made (either lader intesecting or lader below)
@@ -24,10 +24,9 @@ function scr_player_idle(){
 	sprite_index = spr_pc;
 	
 	// Wall squish to death
-	if (prior_state == states.idle and coords[?"vert_collide"] and coords[?"horiz_collide"]) {
-		state = states.death;
+	if (prior_state == pc_states.idle and coords[?"vert_collide"] and coords[?"horiz_collide"]) {
+		state = pc_states.death;
 	}
-	
 	// Save prior state
 	prior_state = state;
 	
@@ -46,7 +45,7 @@ function scr_player_idle(){
 
 	// Transisitons
 	if (horiz_input != 0) {
-		state = states.run;
+		state = pc_states.run;
 	}
 	
 	// Change state to Jump
@@ -56,22 +55,22 @@ function scr_player_idle(){
 		
 	    // Start the jump timer here
 		t_jump = current_time
-		state = states.jump;	
+		state = pc_states.jump;	
 	}
 	
 	// Collision with obj_ladder and input is up then Change state to Climb
 	if (place_meeting(x,y, obj_ladder) and vert_input < 0 ) {
-		state = states.climb;
+		state = pc_states.climb;
 	}
 	
 	// Obj_ladder below and input is vspd is down then Change state to Climb make sure not colliding with the ground
 	if (vert_input > 0 and place_meeting(x,y+1, obj_ladder)) {
-		if (nearby[?"bottom"][?"obj_wall"] == true) state = states.idle;
-		else state = states.climb;
+		if (nearby[?"bottom"][?"obj_wall"] == true) state = pc_states.idle;
+		else state = pc_states.climb;
 	}
 	
 	if (!nearby[?"bottom"][?"obj_wall"] and !nearby[?"bottom"][?"obj_ladder"] and !nearby[?"bottom"][?"obj_platform_move"]) {
-		state = states.fall;
+		state = pc_states.fall;
 		apogee = y;
 	}
 	// Change to death state

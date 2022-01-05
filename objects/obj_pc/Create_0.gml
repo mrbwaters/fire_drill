@@ -12,8 +12,8 @@ facing = 0;
 coords = ds_map_create();
 get_collision(meta_collision, coords);
 
-// Player states
-enum states {
+// Player pc_states
+enum pc_states {
 	idle,
 	run,
 	jump,
@@ -23,7 +23,7 @@ enum states {
 }
 
 // set initial state
-state		= states.idle;
+state		= pc_states.idle;
 prior_state =  state;
 player_init = false;
 init_room	= "null";
