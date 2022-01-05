@@ -47,6 +47,6 @@ function scr_player_jump(){
 	// If collide with ladder and key pressed is UP Change to Climb
 
 	if (place_meeting(x,y,obj_ladder) and vert_input != 0) {
-		state = states.climb;	
+		state = pc_states.climb;	
 	}
 }

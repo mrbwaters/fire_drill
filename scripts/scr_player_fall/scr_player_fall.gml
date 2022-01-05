@@ -25,7 +25,7 @@ function scr_player_fall(){
 	apply_gravity();
 	hspd = v_run * horiz_input;
 	
-	// Transition to states
+	// Transition to pc_states
 		// Return to idle after a fall
 	if (coords[?"vert_collide"] == true and coords[?"dy"] > 0) {
 		state = pc_states.idle;
@@ -34,13 +34,13 @@ function scr_player_fall(){
 	
 	// Return to idle after a fall onto a moving platform
 	if (place_meeting(x,y, obj_platform_move)) {
-		state = states.idle;
+		state = pc_states.idle;
 		sfx_play("Land")
 	}
 	
 	// If collide with ladder and key pressed is UP Change to Climb
 	if (place_meeting(x,y,obj_ladder) and vert_input != 0) {
-		state = states.climb;	
+		state = pc_states.climb;	
 	}
 
 	// Change to death state
