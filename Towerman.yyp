@@ -66,6 +66,7 @@
     {"id":{"name":"Track4_Adventure_Demo_0a","path":"sounds/Track4_Adventure_Demo_0a/Track4_Adventure_Demo_0a.yy",},"order":3,},
     {"id":{"name":"spr_Torch_L","path":"sprites/spr_Torch_L/spr_Torch_L.yy",},"order":0,},
     {"id":{"name":"spr_textbox","path":"sprites/spr_textbox/spr_textbox.yy",},"order":7,},
+    {"id":{"name":"spr_title_card","path":"sprites/spr_title_card/spr_title_card.yy",},"order":5,},
     {"id":{"name":"scr_player_death","path":"scripts/scr_player_death/scr_player_death.yy",},"order":7,},
     {"id":{"name":"sfx_weekend_warrior_3","path":"sounds/sfx_weekend_warrior_3/sfx_weekend_warrior_3.yy",},"order":7,},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},"order":7,},

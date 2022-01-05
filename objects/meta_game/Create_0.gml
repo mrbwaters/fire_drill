@@ -1,6 +1,3 @@
-// Meta
-testing		= false;
-
 // pc_states
 enum game_states {
 	start,
@@ -40,6 +37,10 @@ flag_rm_6 = false;
 current_checkpoint_room = rm_1;
 current_checkpoint_x	= grid_scale * 6 + 2; // add 2 because spr_pc is not centered
 current_checkpoint_y	= grid_scale * 13 + 2; // add 2 because spr_pc is not centered
+
+// Title card
+title_card = true;
+title_counter = 0;
 
 // Blackout effect
 blackout			= false

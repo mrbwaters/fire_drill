@@ -1,3 +1,5 @@
+if title_card then draw_sprite(spr_title_card, 0, 0, 0);
+
 if show_tip {
 	if !instance_exists(obj_pc) then exit; // Don't run in menus or other rooms
 	

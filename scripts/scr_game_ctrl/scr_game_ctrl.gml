@@ -10,10 +10,12 @@ function apply_game_state() {
 }
 
 function scr_game_start() {
-	game_begin = true;
-	scr_game_menu();
-	room_goto(rm_menu);
-	state = game_states.menu;
+	title_counter++;
+	if (title_counter > 3 * room_speed) || (key_action || key_start) {
+		title_card = false;
+		room_goto(rm_menu);
+		state = game_states.menu;
+	}
 }
 
 function scr_game_menu() {
