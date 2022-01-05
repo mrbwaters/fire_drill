@@ -5,4 +5,7 @@ function scr_game_step(){
 	
 	// Enter the state machine
 	apply_game_state();
+	
+	// Check BGM mute conditions
+	bgm_step();
 }

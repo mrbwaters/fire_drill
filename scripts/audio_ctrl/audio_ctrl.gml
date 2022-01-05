@@ -1,12 +1,32 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
+
+//// Audio Control
+function bgm_step() {
+	
+if meta_game.mute {
+	audio_sound_gain(global._bgm,.0,.1)
+	_sfx_gain = 0;
+}
+
+if !meta_game.mute {
+	audio_sound_gain(global._bgm,.03,.1)
+	_sfx_gain = 0.06;
+}
+}
+
 function bgm_play(){
 	
 if variable_global_exists("_bgm") {
-	audio_stop_sound(global._bgm);
+	bgm_stop();
 }
 
 switch (room) {
+	default: 
+	global._bgm = audio_play_sound(Track4_Adventure_Demo_0a, 5, true);
+	audio_sound_gain(global._bgm,.03,.1);
+	break 
 	case rm_2:
 	global._bgm=audio_play_sound(Track1_Spooky_Demo_0b, 5, true);
 	audio_sound_gain(global._bgm,.03,.1);

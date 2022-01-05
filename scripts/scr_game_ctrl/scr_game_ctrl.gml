@@ -13,7 +13,12 @@ function scr_game_start() {
 	game_begin = true;
 	scr_game_menu();
 	room_goto(rm_menu);
+	room_init=false;
 	state = game_states.menu;
+	// Start Background Music
+
+
+
 }
 
 function scr_game_menu() {
@@ -41,6 +46,7 @@ function scr_game_death() {
 function fn_resume() {
 	room_goto(meta_game.next_room);
 	meta_game.state = game_states.levels;
+	//room_init=false;
 }
 
 function fn_mute() {

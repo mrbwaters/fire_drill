@@ -10,7 +10,7 @@ if !checked and meta_game.key_action {
 	}
 	
 	image_speed = 2;
-	//sfx_play("Menu_Select");
+	sfx_play("Menu_Select");
 	
 	// Record location of PC so that respawns here on death.
 	meta_game.current_checkpoint_room = room;
