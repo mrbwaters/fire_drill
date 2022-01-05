@@ -22,6 +22,7 @@ function scr_player_idle(){
 	*/
 	// Always do prior_state checks before setting the prior_state
 	sprite_index = spr_pc;
+	
 	// Get pushed off moving object Last state is idle and vspd > 0 Change state to Fall
 	if (prior_state == states.idle and vspd > 0 and coords[?"dy"] != 0) {
 		state = states.fall;
@@ -80,6 +81,7 @@ function scr_player_idle(){
 		else state = states.climb;
 	}
 	
+	if (!place_meeting(x,y+1,obj_wall) and !place_meeting(x,y+1,obj_ladder) and !place_meeting(x,y+1, obj_platform_move)) state = states.fall; apogee=y; return;
 		
 	// Change to death state
 	// Enemy collision

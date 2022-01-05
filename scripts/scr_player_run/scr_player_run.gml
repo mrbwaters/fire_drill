@@ -48,17 +48,13 @@ function scr_player_run(){
 		state = states.jump;	
 	}
 	
-	// When not on top of something Change state to Fall
-	if (vspd > 0) {
-		state = states.fall;
-		apogee =  y;
-	}
-	
 	// Change to death state
 	// Spike collision
 	if (instance_place(x, y, meta_damage)) {
 		state = states.death;
 	}
+
+    if (!place_meeting(x,y+1,obj_wall) and !place_meeting(x,y+1,obj_ladder) and !place_meeting(x,y+1, obj_platform_move)) state = states.fall; apogee=y; return;
 
 	// Enemy collision
 	// Wall squish

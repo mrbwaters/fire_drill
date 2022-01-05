@@ -35,6 +35,12 @@ function scr_player_climb(){
 		stop = true;
 	}
 	
+	if (prior_state == states.climb and jump_input != 0) {
+		// Start the jump timer here
+		t_jump = current_time;
+		state = states.jump;	
+	}
+	
 	// Save prior state
 	prior_state = state;
 	
@@ -54,14 +60,6 @@ function scr_player_climb(){
 		if (abs(x/meta_game.grid_scale - dx_sprite/meta_game.grid_scale - _ladder.x/meta_game.grid_scale) <= tol) {
 			x=_ladder.x + dx_sprite;
 			}
-		}
-	
-	// Transition to states
-	// Change state to Jump
-	if (jump_input != 0) {
-		// Start the jump timer here
-		t_jump = current_time;
-		state = states.jump;	
 	}
 	
 	if (vert_input == 0 ){
