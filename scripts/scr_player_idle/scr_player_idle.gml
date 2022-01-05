@@ -65,11 +65,11 @@ function scr_player_idle(){
 	
 	// Obj_ladder below and input is vspd is down then Change state to Climb make sure not colliding with the ground
 	if (vert_input > 0 and place_meeting(x,y+1, obj_ladder)) {
-		if (nearby[?"bottom"][?"obj_wall"] == true) state = pc_states.idle;
+		if (place_meeting(x,y+8,obj_wall)) state = pc_states.idle;
 		else state = pc_states.climb;
 	}
 	
-	if (!nearby[?"bottom"][?"obj_wall"] and !nearby[?"bottom"][?"obj_ladder"] and !nearby[?"bottom"][?"obj_platform_move"]) {
+	if (!place_meeting(x,y+8,obj_wall) and !place_meeting(x,y+8,obj_ladder) and !place_meeting(x,y+8,obj_platform_move)) {
 		state = pc_states.fall;
 		apogee = y;
 	}

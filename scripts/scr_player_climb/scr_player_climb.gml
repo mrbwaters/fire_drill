@@ -18,7 +18,7 @@ function scr_player_climb(){
 	sprite_index = spr_pc_climb;
 	stop = false;
 	//Do no climb at a wall
-	if (nearby[?"bottom"][?"obj_wall"] == true and prior_state == pc_states.climb) {
+	if (place_meeting(x,y+1,obj_wall) and prior_state == pc_states.climb) {
 		vert_input = 0;
 		stop = true;
 	}
