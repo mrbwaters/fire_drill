@@ -16,13 +16,7 @@ function scr_game_start() {
 		room_goto(rm_menu);
 		state = game_states.menu;
 	}
-
-	game_begin = true;
-	scr_game_menu();
-	room_goto(rm_menu);
-	room_init=false;
-	state = game_states.menu;
-	// Start Background Music
+}
 
 function scr_game_menu() {
 	//MENU STUFF GOES HERE	
