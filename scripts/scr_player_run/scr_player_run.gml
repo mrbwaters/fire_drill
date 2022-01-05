@@ -21,7 +21,7 @@ function scr_player_run(){
 	prior_state = state;
 	
 	// Get horizontal speed for movement when on top of bounding box for obj_wall and when vspd == 0
-		// Local variable for moving platform logic
+	// Local variable for moving platform logic
 	moving_platform_id = instance_place(x,y+1, obj_platform_move);
 	platform_hspd = 0;
 	//Stay on moving platform - If on top bounding box of obj_platform_move then match hspd of target object
@@ -59,13 +59,6 @@ function scr_player_run(){
 	if (instance_place(x, y, meta_damage)) {
 		state = states.death;
 	}
-	
-	// Walking off ladder or wall, change to fall.
-	if (!place_meeting(x,y+1, obj_ladder) and !place_meeting(x,y+1, obj_wall) and !place_meeting(x,y+1, obj_platform_move)) {
-		state = states.fall;
-		apogee =  y;
-	}
-	
 
 	// Enemy collision
 	// Wall squish
