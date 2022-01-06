@@ -11,7 +11,7 @@ function apply_game_state() {
 
 function scr_game_start() {
 	title_counter++;
-	if (title_counter > 3 * room_speed) || (key_action || key_start) {
+	if (title_counter > title_duration * room_speed) || (key_action || key_start) {
 		title_card = false;
 		room_goto(rm_menu);
 		state = game_states.menu;
@@ -23,8 +23,16 @@ function scr_game_menu() {
 }
 
 function scr_game_levels() {
+	room_persistent = false;
+	
+	// go to pause state
 	if (key_menu || key_start) {
 		state = game_states.pause;
+	}
+	
+	// go to death state
+	if obj_pc.state == pc_states.death {
+		state = game_states.death;
 	}
 }
 
@@ -33,17 +41,33 @@ function scr_game_pause() {
 	next_room = room;
 	room_persistent = true;
 	room_goto(rm_menu);
+	bgm_play();
 	state = game_states.menu;
 }
 
 function scr_game_death() {
-	//DEATH STUFF GOES HERE	
+	blackout = true;
+	if blackout_alpha < 1 {
+		blackout_alpha += 1 / blackout_fade_time; // alpha will reach 1 at set fade time
+		if blackout_alpha >= 1 {
+			// Respawn
+			pcx = current_checkpoint_x;
+			pcy = current_checkpoint_y;			
+				
+			if meta_game.current_checkpoint_room == room then room_restart();
+			else room_goto(meta_game.current_checkpoint_room);
+			state = game_states.levels;
+			
+			// Reset blackout
+			blackout_alpha = 0;
+			blackout = false;
+		}
+	}	
 }
 
 function fn_resume() {
 	room_goto(meta_game.next_room);
 	meta_game.state = game_states.levels;
-	//room_init=false;
 }
 
 function fn_mute() {

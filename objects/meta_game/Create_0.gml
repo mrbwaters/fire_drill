@@ -39,6 +39,7 @@ current_checkpoint_y	= grid_scale * 13 + 2; // add 2 because spr_pc is not cente
 
 // Title card
 title_card = true;
+title_duration = 3; // seconds to show title card on start
 title_counter = 0;
 
 // Blackout effect

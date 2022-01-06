@@ -15,13 +15,6 @@ function print_debug_console() {
 	if (state != 0) show_debug_message("DEBUG: STATE >>> " + string(state) + "  PRIOR STATE >>> " + string(prior_state));	
 }
 
-function player_death() {
-	sprite_index = spr_pc_death;
-	meta_game.blackout = true; // Fade out and change room.
-	sfx_play("Death");
-	//bgm_stop();
-}
-
 function apply_facing() {
 	switch facing {
 		case "Left": sprite_index=spr_pc_L; break
