@@ -26,6 +26,7 @@ function scr_player_climb(){
 	// Fall at ladder bottom
 	if (vert_input >= 0 and !place_meeting(x,y,obj_ladder) and prior_state == pc_states.climb) {
 		state = pc_states.fall;
+		apogee = y;
 	}
 	
 	//Do not climb at top of ladder
