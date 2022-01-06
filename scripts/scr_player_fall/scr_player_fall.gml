@@ -31,9 +31,8 @@ function scr_player_fall(){
 		if (horiz_input != 0) {
 			vspd = 0;
 			state = pc_states.run;
-			return;
 		}
-		state = pc_states.idle;
+		else state = pc_states.idle;
 		sfx_play("Land");
 	}
 	
