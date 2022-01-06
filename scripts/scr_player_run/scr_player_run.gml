@@ -27,6 +27,8 @@ function scr_player_run(){
 	//Stay on moving platform - If on top bounding box of obj_platform_move then match hspd of target object
 	if (moving_platform_id) {
 		platform_hspd = variable_instance_get(moving_platform_id, "hspd");
+		platform_vspd = variable_instance_get(moving_platform_id, "vspd");
+		vspd = platform_vspd;
 	} 
 	hspd = platform_hspd + v_run * horiz_input;
 	
