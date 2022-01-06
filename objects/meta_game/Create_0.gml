@@ -4,7 +4,8 @@ enum game_states {
 	menu,
 	levels,
 	pause,
-	death
+	death,
+	win
 }
 
 // Room logic

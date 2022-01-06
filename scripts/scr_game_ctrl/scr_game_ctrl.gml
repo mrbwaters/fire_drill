@@ -6,6 +6,7 @@ function apply_game_state() {
 		case game_states.levels:	scr_game_levels();	break;
 		case game_states.pause:		scr_game_pause();	break;
 		case game_states.death:		scr_game_death();	break;
+		case game_states.win:		scr_game_win();		break;
 	}
 }
 
@@ -52,7 +53,7 @@ function scr_game_death() {
 		if blackout_alpha >= 1 {
 			// Respawn
 			pcx = current_checkpoint_x;
-			pcy = current_checkpoint_y;			
+			pcy = current_checkpoint_y;	
 				
 			if meta_game.current_checkpoint_room == room then room_restart();
 			else room_goto(meta_game.current_checkpoint_room);
@@ -63,6 +64,10 @@ function scr_game_death() {
 			blackout = false;
 		}
 	}	
+}
+
+function scr_game_win() {
+	// WIN LOGIC HERE	
 }
 
 function fn_resume() {
