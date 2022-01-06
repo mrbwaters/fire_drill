@@ -41,7 +41,7 @@ function scr_player_idle(){
 	if (moving_platform_id) {
 		hspd = variable_instance_get(moving_platform_id, "hspd");
 		vspd = variable_instance_get(moving_platform_id, "vspd");
-	} 
+	}
 
 	// Transisitons
 	if (horiz_input != 0) {
