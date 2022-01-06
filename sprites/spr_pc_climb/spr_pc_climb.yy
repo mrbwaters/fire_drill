@@ -73,8 +73,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Characters",
-    "path": "folders/Sprites/Characters.yy",
+    "name": "PC",
+    "path": "folders/Sprites/Characters/PC.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_pc_climb",
