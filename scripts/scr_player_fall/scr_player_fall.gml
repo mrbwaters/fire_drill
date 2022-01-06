@@ -26,8 +26,13 @@ function scr_player_fall(){
 	hspd = v_run * horiz_input;
 	
 	// Transition to pc_states
-		// Return to idle after a fall
+	// Return to idle after a fall
 	if (coords[?"vert_collide"] == true and coords[?"dy"] > 0) {
+		if (horiz_input != 0) {
+			vspd = 0;
+			state = pc_states.run;
+			return;
+		}
 		state = pc_states.idle;
 		sfx_play("Land");
 	}
@@ -48,6 +53,7 @@ function scr_player_fall(){
 		state = pc_states.death;
 	}
 	
+	// Falling death
 	if ((place_meeting(x,y+8,obj_wall) or place_meeting(x,y+8,obj_ladder) or place_meeting(x,y+8,obj_platform_move)) and coords[?"dy"] > 0 and (y - apogee) > fall_dead) {
 		state =  pc_states.death;
 	}
