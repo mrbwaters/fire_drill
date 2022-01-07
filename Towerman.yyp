@@ -65,7 +65,6 @@
     {"id":{"name":"sfx_injured_climber_2","path":"sounds/sfx_injured_climber_2/sfx_injured_climber_2.yy",},"order":3,},
     {"id":{"name":"sfx_death","path":"sounds/sfx_death/sfx_death.yy",},"order":6,},
     {"id":{"name":"sfx_injured_climber_3","path":"sounds/sfx_injured_climber_3/sfx_injured_climber_3.yy",},"order":4,},
-    {"id":{"name":"obj_checkpoint24","path":"objects/obj_checkpoint24/obj_checkpoint24.yy",},"order":16,},
     {"id":{"name":"spr_win","path":"sprites/spr_win/spr_win.yy",},"order":13,},
     {"id":{"name":"Track4_Adventure_Demo_0a","path":"sounds/Track4_Adventure_Demo_0a/Track4_Adventure_Demo_0a.yy",},"order":3,},
     {"id":{"name":"spr_Torch_L","path":"sprites/spr_Torch_L/spr_Torch_L.yy",},"order":0,},

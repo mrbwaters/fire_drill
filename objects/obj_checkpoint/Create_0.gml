@@ -9,3 +9,5 @@ switch(room) {
 		case rm_5: checked = meta_game.flag_rm_5; break;
 		case rm_6: checked = meta_game.flag_rm_6; break;
 }
+
+if checked then image_index = image_number - 1;
