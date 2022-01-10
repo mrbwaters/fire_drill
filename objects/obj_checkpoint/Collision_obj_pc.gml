@@ -9,7 +9,7 @@ if !checked and meta_game.key_action {
 		case rm_6: meta_game.flag_rm_6 = true; break;
 	}
 	
-	image_speed = 2;
+	image_speed = 1;
 	sfx_play("Menu_Select");
 	
 	// Record location of PC so that respawns here on death.
